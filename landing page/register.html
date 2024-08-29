@@ -26,15 +26,27 @@
 <title>Register</title>
 </head>
 <body>
-<input type="hidden" id="base_url" value="https://hotel.bdtask-demo.com/xainhotel/" />
-<input type="hidden" id="csrf_token" value="5b87edff149692a421d64b3ae92c2151" />
-<input type="hidden" id="findate" value="2026-07-21">
-<nav class="navbar navbar-expand-lg navbar-light header-sticky shadow-sm">
-<a class="navbar-brand" href="index.html"><img src="assets/img/2021-11-18/h.png" alt></a>
+    <style>
+        .about-text{
+            color: #fee277;
+        }
+        .bg-gold{
+            background-color: #fee277;
+        }
+        .badge-gold{
+            border: 1px solid #fee277;
+        }
+    </style>
+<!-- ================================navbar======================================= -->
+<!-- use this as the navbar.html -->
+<nav class="navbar navbar-expand-lg navbar-light header-sticky shadow-sm bg-dark">
+<a class="navbar-brand" href="index.html"><img src="../assets/img/boutique hotel.png" alt width="80px">
+<span class=" text-white-50" style="font-size: 20px;">Boutique Hotel</span>
+</a>
 <div class="d-flex order-lg-last">
 <ul class="navbar-right d-flex align-items-center list-unstyled mb-0">
 <li class="nav-item login">
-<a class="nav-link" href="user/login.html"><i class="far fa-user-circle d-lg-none"></i><span class="d-none d-lg-block">Sign In</span></a>
+<a class="nav-link" href="user/login.html"><i class="far fa-user-circle d-lg-none"></i><span class="d-none d-lg-block text-white-50">Sign In</span></a>
 </li>
 <li class="nav-item dropdown search-icon">
 <div class="dropdown-menu search-dropdown dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown1">
@@ -42,8 +54,7 @@
 </div>
 </li>
 <li class="nav-item nav-btn">
-<form action="https://hotel.bdtask-demo.com/xainhotel/user/roomlist" method="post" accept-charset="utf-8">
-<input type="hidden" name="csrf_test_name" value="5b87edff149692a421d64b3ae92c2151" />
+<form action="" method="post" accept-charset="utf-8">
 <div class="row no-gutters custom-search-input-2 search-form-content">
 <div class="search-option col-12 col-sm-6 col-lg-3" hidden>
 <label>Check In <i class="ti-calendar"></i></label>
@@ -71,8 +82,8 @@
 </div>
 </div>
 </div>
-<div>
-<button type="submit" class="border-0 d-none d-lg-inline-block nav-link">
+<div class="">
+<button type="submit" class="border-0 d-none d-lg-inline-block nav-link" style="background-color: #fee277; color:#000; font-weight:600;">
 <i class="far fa-calendar-alt mr-2"></i><span>Book Now</span>
 </button>
 </div>
@@ -86,34 +97,34 @@
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <ul class="navbar-nav mr-auto">
 <li class="nav-item  active">
-<a class="nav-link " href="index.html">Home</a>
+<a class="nav-link text-white-50" href="index.html">Home</a>
 <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown2">
 </div>
 </li>
 <li class="nav-item  ">
-<a class="nav-link " href="about.html">About Us</a>
+<a class="nav-link text-white-50" href="about.html">About Us</a>
 <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown2">
 </div>
 </li>
 <li class="nav-item  ">
-<a class="nav-link " href="contact.html">Contact Us</a>
+<a class="nav-link text-white-50" href="contact.html">Contact Us</a>
 <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown2">
 </div>
 </li>
 <li class="nav-item  ">
-<a class="nav-link " href="gallery.html">Gallery</a>
+<a class="nav-link text-white-50" href="gallery.html">Gallery</a>
 <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown2">
 </div>
 </li>
 <li class="nav-item  ">
-<a class="nav-link " href="index.html">My Profile</a>
+<a class="nav-link text-white-50" href="index.html">My Profile</a>
 <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown2">
 </div>
 </li>
 </ul>
 </div>
 </nav>
-
+<!-- ===============================end navbar============================== -->
 <div class="section bg-white">
 <div class="container">
 <div class="row justify-content-center">
@@ -159,7 +170,7 @@ Please Login </div>
 <input required type="checkbox" name="useragree" class="custom-control-input" id="customCheck1">
 <label class="custom-control-label" for="customCheck1">By signing up, you agree to the <a>terms of service</a></label>
 </div>
-<button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+<button type="submit" class="btn bg-gold btn-block">Sign Up</button>
 <p class="text-muted text-center mt-3 mb-0">
 By signing up, you agree to our <a class="external">terms of use</a>.
 </p>
@@ -169,88 +180,90 @@ By signing up, you agree to our <a class="external">terms of use</a>.
 </div>
 </div>
 </div>
+<!-- ========================= footer section =========================== -->
 <div class="py-5 bg-dark">
-<div class="container">
-<div class="row">
-<div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-<div class="newslatter">
-<h3 class="text-center text-white">Get updates &amp; exclusive offers</h3>
-<p class="text-center">Sign up to our newsletter to be the first to hear about<br class="d-none d-lg-block">new openings, offers and more.</p>
-<div class="input-group mb-3">
-<input type="text" name="youremail" id="youremail" class="form-control border-0 rounded-0" placeholder="Enter email here..." aria-label="Recipient's username" aria-describedby="button-addon2">
-<div class="input-group-append">
-<button class="btn btn-primary rounded-0 border-0" type="button" id="button-addon2" onClick="subscribeemail()">Subscribe</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<footer class="main-footer py-5 border-top-muted bg-dark">
-<div class="container">
-<div class="row">
-<div class="col-lg-3 col-xl-3 mb-5">
-<div class="footer-about">
-<div class="footer-logo mb-3">
-<a href="index.html"><img src="assets/img/2021-11-18/F.png" alt class="img-fluid"></a>
-</div>
-Plot-7, Road-02, Hotel Motel Zone, San Francisco Road, United States of America <div><br></div>
-<a href="https://hotel.bdtask-demo.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="91f8fff7fed1f5f4fcfebff2fefc">[email&#160;protected]</a>
-</div>
-</div>
-<div class="col-lg-7 col-xl-7 offset-xl-1">
-<div class="row">
-<div class="col-sm-6 col-md-4 col-lg-4 mb-3 mb-lg-0">
-<h3 class="link-title fs-18 mb-3 font-weight-600 position-relative text-white">
-Pages</h3>
-<ul class="footer-link list-unstyled menu mb-0">
-<li class="mb-2"><a class="link d-block font-weight-500" href="hotel.html">Home</a></li>
-<li class="mb-2"><a class="link d-block font-weight-500" href="about.html">About Us</a></li>
-<li class="mb-2"><a class="link d-block font-weight-500" href="contact.html">Contact Us</a></li>
-<li class="mb-2"><a class="link d-block font-weight-500" href="gallery.html">Gallery</a></li>
-<li class="mb-2"><a class="link d-block font-weight-500" href="index.html">My Profile</a></li>
-</ul>
-</div>
-<div class="col-sm-6 col-md-4 col-lg-4 mb-3 mb-lg-0">
-<h3 class="link-title fs-18 mb-3 font-weight-600 position-relative text-white">
-Social Link</h3>
-<ul class="list-unstyled social-icon">
-<li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram icon-wrap"></i> <span>Instagram </span> </a></li>
-<li><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-twitter icon-wrap"></i> <span>Twitter</span> </a></li>
-<li><a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-dribbble icon-wrap"></i> <span>Dribbble</span> </a></li>
-<li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-facebook-f icon-wrap"></i> <span>Facebook</span> </a></li>
-</ul>
-</div>
-<div class="col-sm-6 col-md-4 col-lg-4">
-<h3 class="link-title fs-18 mb-3 font-weight-600 position-relative text-white">
-Company Policy</h3>
-<ul class="footer-link list-unstyled menu mb-0">
-<li class="mb-2"><a class="link d-block font-weight-500" href="privacy.html">Privacy</a></li>
-<li class="mb-2"><a class="link d-block font-weight-500" href="terms.html">Terms & Conditions</a></li>
-</ul> </div>
-</div>
-</div>
-</div>
-</div>
-</footer>
-
-<div class="sub-footer border-top-muted bg-dark py-3">
-<div class="container">
-<div class="row justify-content-end align-items-center">
-<div class="col-md-6">
-<div class="copy">Powered by bdtask</div>
-</div>
-<div class="col-md-6">
-<ul class="list-unstyled text-right mb-0">
-<li class="list-inline-item"><a href="privacy.html" class="text-white">Privacy</a></li>
-<li class="list-inline-item"><a href="terms.html" class="text-white">Terms &amp; Conditions</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
+    <div class="container">
+    <div class="row">
+    <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+    <div class="newslatter">
+    <h3 class="text-center text-white">Get updates &amp; exclusive offers</h3>
+    <p class="text-center">Sign up to our newsletter to be the first to hear about<br class="d-none d-lg-block">new openings, offers and more.</p>
+    <div class="input-group mb-3">
+    <input type="text" name="youremail" id="youremail" class="form-control border-0 rounded-0" placeholder="Enter email here..." aria-label="Recipient's username" aria-describedby="button-addon2">
+    <div class="input-group-append">
+    <button class="btn bg-gold rounded-0 border-0" type="button" id="button-addon2" onClick="subscribeemail()">Subscribe</button>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <footer class="main-footer py-5 border-top-muted bg-dark">
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-3 col-xl-3 mb-5">
+    <div class="footer-about">
+    <div class="footer-logo mb-3">
+    <a href="index.html"><img src="assets/img/boutique hotel.png" alt class="img-fluid"></a>
+    </div>
+    Plot-7, Road-02, Hotel Motel Zone, San Francisco Road, United States of America <div><br></div>
+    <a href="https://hotel.bdtask-demo.com/cdn-cgi/l/email-protection" class="__cf_email__ about-text" data-cfemail="751c1b131a351110181a5b161a18">[email&#160;protected]</a>
+    </div>
+    </div>
+    <div class="col-lg-7 col-xl-7 offset-xl-1">
+    <div class="row">
+    <div class="col-sm-6 col-md-4 col-lg-4 mb-3 mb-lg-0">
+    <h3 class="link-title fs-18 mb-3 font-weight-600 position-relative text-white">
+    Pages</h3>
+    <ul class="footer-link list-unstyled menu mb-0">
+    <li class="mb-2"><a class="link d-block font-weight-500" href="hotel.html">Home</a></li>
+    <li class="mb-2"><a class="link d-block font-weight-500" href="about.html">About Us</a></li>
+    <li class="mb-2"><a class="link d-block font-weight-500" href="contact.html">Contact Us</a></li>
+    <li class="mb-2"><a class="link d-block font-weight-500" href="gallery.html">Gallery</a></li>
+    <li class="mb-2"><a class="link d-block font-weight-500" href="index.html">My Profile</a></li>
+    </ul>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-4 mb-3 mb-lg-0">
+    <h3 class="link-title fs-18 mb-3 font-weight-600 position-relative text-white">
+    Social Link</h3>
+    <ul class="list-unstyled social-icon">
+    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram icon-wrap bg-gold"></i> <span>Instagram </span> </a></li>
+    <li><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-twitter icon-wrap"></i> <span>Twitter</span> </a></li>
+    <li><a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-dribbble icon-wrap"></i> <span>Dribbble</span> </a></li>
+    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-facebook-f icon-wrap"></i> <span>Facebook</span> </a></li>
+    </ul>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-4">
+    <h3 class="link-title fs-18 mb-3 font-weight-600 position-relative text-white">
+    Company Policy</h3>
+    <ul class="footer-link list-unstyled menu mb-0">
+    <li class="mb-2"><a class="link d-block font-weight-500" href="privacy.html">Privacy</a></li>
+    <li class="mb-2"><a class="link d-block font-weight-500" href="terms.html">Terms & Conditions</a></li>
+    </ul> </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </footer>
+    
+    <div class="sub-footer border-top-muted bg-dark py-3">
+    <div class="container">
+    <div class="row justify-content-end align-items-center">
+    <div class="col-md-6">
+    <div class="copy">Powered by bdtask</div>
+    </div>
+    <div class="col-md-6">
+    <ul class="list-unstyled text-right mb-0">
+    <li class="list-inline-item"><a href="privacy.html" class="text-white">Privacy</a></li>
+    <li class="list-inline-item"><a href="terms.html" class="text-white">Terms &amp; Conditions</a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- =========================end footer section =========================== -->
 
 
 
