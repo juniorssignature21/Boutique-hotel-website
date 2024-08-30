@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from pixelwibes.in/templates/hotelair/html/stock-report.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:31:47 GMT -->
-<head>
+  <!-- Mirrored from pixelwibes.in/templates/hotelair/html/items-unit-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:31:45 GMT -->
+  <head>
     <title>: HotelAir : Hotel Management Admin Dashboard Template</title>
-    <meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="Responsive Bootstrap 5 admin dashboard template & web App ui kit.">
-	<meta name="keyword" content="bootstrap admin template">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Responsive Bootstrap 5 admin dashboard template & web App ui kit."
+    />
+    <meta name="keyword" content="bootstrap admin template" />
 
-	<!--[ Favicon]-->
-	<link rel="icon" type="image/x-icon" href="/hotel main/pixelwibes.in/templates/hotelair/html/assets/images/favicon.ico">
-	<link rel="icon" type="image/png" sizes="16x16" href="/hotel main/pixelwibes.in/templates/hotelair/html/assets/images/favicon-16x16.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/hotel main/pixelwibes.in/templates/hotelair/html/assets/images/favicon-32x32.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/hotel main/pixelwibes.in/templates/hotelair/html/assets/images/apple-touch-icon.png">
+    <!--[ Favicon]-->
+    <link rel="icon" type="image/x-icon" href="/hotel main/pixelwibes.in/templates/hotelair/html/assets/images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/hotel main/pixelwibes.in/templates/hotelair/html/assets/images/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/hotel main/pixelwibes.in/templates/hotelair/html/assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/hotel main/pixelwibes.in/templates/hotelair/html/assets/images/apple-touch-icon.png"
+    />
 
-    <link rel="stylesheet" href="/hotel main/pixelwibes.in/templates/hotelair/html/assets/vendor/dataTables.min.css">
-	
+    <link rel="stylesheet" href="/hotel main/pixelwibes.in/templates/hotelair/html/assets/vendor/dataTables.min.css" />
+
     <!--[ Template main css file ]-->
-	<link rel="stylesheet" href="/hotel main/pixelwibes.in/templates/hotelair/html/assets/css/style.min.css">
+    <link rel="stylesheet" href="/hotel main/pixelwibes.in/templates/hotelair/html/assets/css/style.min.css" />
 	<link rel="stylesheet" href="/hotel main/pixelwibes.in/templates/hotelair/html/assets/css/Admin.css">
-</head>
 
-<body data-theme="theme-Custom" class="svgstroke-a bg-gradient"> 
-	  
-	<main class="container-fluid px-0">
+  </head>
 
+  <body data-theme="theme-Custom" class="svgstroke-a bg-gradient">
+    <main class="container-fluid px-0">
+      
 		<!-- start: page menu link -->
 		<aside class="ps-xl-5 ps-lg-4 ps-3 pe-2 py-3 sidebar sticky-top" data-bs-theme="none">
 			<nav class="navbar navbar-expand-xl py-0">
 				<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvas_Navbar">
 					<div class="offcanvas-header">
-						<span class="fw-bold fs-5 text-gradient">X-Empire</span>
-						<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+						<span class="fw-bold ps-2 fs-5 d-none d-xl-inline-flex text-gradient w-[40vw]border-2 flex items-center">X<small>-</small>EMPIRE </span>						<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 					</div>
 					<div class="offcanvas-body flex-column custom_scroll ps-4 ps-xl-0">
 						<div class="d-flex align-items-start mb-4">
@@ -627,7 +645,7 @@
 			<div class="px-xl-5 px-lg-4 px-3 py-2 page-header">
 				<ol class="breadcrumb mb-0 bg-transparent">
 					<li class="breadcrumb-item"><a href="index.html" title="home">Home</a></li>
-					<li class="breadcrumb-item active" aria-current="page" title="Stock Report">Stock Report</li>
+					<li class="breadcrumb-item active" aria-current="page" title="Items Unit List">Items Unit List</li>
 				</ol>
 				<ul class="list-unstyled action d-flex align-items-center mb-0">
 					<li class="dropdown">
@@ -692,192 +710,454 @@
                 <div class="row g-3">
 					<div class="col-sm-12">
 						<div class="d-flex align-items-center justify-content-between flex-wrap">
-							<h3 class="fw-bold mb-0">Stock Report</h3>
-						</div>
-				  	</div>
-					<div class="col-sm-12">
-						<div class="card">
-							<div class="card-body">
-								<table class="table dataTable align-middle table-hover table-body" style="width: 100%;">
-									<thead>
-										<tr>
-											<th>Product Name</th>
-											<th>Quantity</th>
-											<th>Price</th>
-											<th>Amount</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Bed Cover</td>
-											<td>30</td>
-											<td>$20</td>
-											<td>$600</td>
-										</tr>
-										<tr>
-											<td>Chair</td>
-											<td>30</td>
-											<td>$50</td>
-											<td>$1500</td>
-										</tr>
-										<tr>
-											<td>Bath Towel</td>
-											<td>300</td>
-											<td>$5</td>
-											<td>$1500</td>
-										</tr>
-										<tr>
-											<td>Pillowcase Set</td>
-											<td>50</td>
-											<td>$10</td>
-											<td>$500</td>
-										</tr>
-										<tr>
-											<td>Hand Soap</td>
-											<td>200</td>
-											<td>$2</td>
-											<td>$400</td>
-										</tr>
-										<tr>
-											<td>Shower Gel</td>
-											<td>80</td>
-											<td>$8</td>
-											<td>$640</td>
-										</tr>
-										<tr>
-											<td>Shampoo</td>
-											<td>60</td>
-											<td>$7</td>
-											<td>$420</td>
-										</tr>
-										<tr>
-											<td>Conditioner</td>
-											<td>40</td>
-											<td>$6</td>
-											<td>$240</td>
-										</tr>
-										<tr>
-											<td>Toothpaste</td>
-											<td>120</td>
-											<td>$3</td>
-											<td>$360</td>
-										</tr>
-										<tr>
-											<td>Toothbrush</td>
-											<td>150</td>
-											<td>$2</td>
-											<td>$300</td>
-										</tr>
-										<tr>
-											<td>Bathrobe</td>
-											<td>20</td>
-											<td>$30</td>
-											<td>$600</td>
-										</tr>
-									</tbody>
-								</table>
+							<h3 class="fw-bold mb-0">Items Unit List</h3>
+							<div class="col-auto d-flex w-sm-100">
+								<button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#add-items">Add Items</button>
 							</div>
 						</div>
-					</div>
-                </div><!-- Row End -->
-			</div>
-		</div>
+				  </div>
+                  <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <table class="table dataTable align-middle table-hover table-body" style="width: 100%;">
+                                    <thead>
+                                        <tr>
+                                            <th>Items Id</th>
+                                            <th>Items Name</th>
+											<th>Short Name</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+										<tr>
+											<td>1101</td>
+											<td>Kilogram</td>
+											<td>kg</td>
+											<td>
+												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-facilites"><i class="bi bi-pencil-square"></i></button>
+												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>1102</td>
+											<td>Liter</td>
+											<td>ltr</td>
+											<td>
+												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-facilites"><i class="bi bi-pencil-square"></i></button>
+												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>1103</td>
+											<td>Milligram</td>
+											<td>mg</td>
+											<td>
+												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-facilites"><i class="bi bi-pencil-square"></i></button>
+												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>1104</td>
+											<td>Tonne</td>
+											<td>tn</td>
+											<td>
+												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-facilites"><i class="bi bi-pencil-square"></i></button>
+												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>1105</td>
+											<td>Gram</td>
+											<td>grm</td>
+											<td>
+												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-facilites"><i class="bi bi-pencil-square"></i></button>
+												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>1106</td>
+											<td>Per Pieces</td>
+											<td>pcs</td>
+											<td>
+												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-facilites"><i class="bi bi-pencil-square"></i></button>
+												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>1106</td>
+											<td>Per Cup</td>
+											<td>cup</td>
+											<td>
+												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-facilites"><i class="bi bi-pencil-square"></i></button>
+												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>1106</td>
+											<td>Pound</td>
+											<td>pnd</td>
+											<td>
+												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-facilites"><i class="bi bi-pencil-square"></i></button>
+												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
+											</td>
+										</tr>
+									</tbody>
+                                </table>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="pe-2">
+                        <a
+                          class="d-flex p-lg-3 p-2 rounded-3"
+                          href="javascript:void(0);"
+                        >
+                          <div class="avatar sm">
+                            <svg
+                              class="svg-stroke"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path
+                                stroke="none"
+                                d="M0 0h24v24H0z"
+                                fill="none"
+                              ></path>
+                              <path
+                                d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"
+                              ></path>
+                              <path d="M12 8v4"></path>
+                              <path d="M12 16h.01"></path>
+                            </svg>
+                          </div>
+                          <div class="flex-fill ms-3">
+                            <span class="d-flex justify-content-between"
+                              ><small class="text-danger">Error 404</small
+                              ><small class="text-muted">Yesterday</small></span
+                            >
+                            <p class="mb-0 mt-1">
+                              HotelAir admin template on website analytics
+                              configurations
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item py-2 py-md-1 col-auto">
+                <div class="vr d-none d-sm-flex h-100 mx-sm-2"></div>
+              </li>
+              
+             
+             
+            </ul>
+          </div>
+        
+        
+    </main>
 
-	</main>
+    <!-- start: template setting, and more. -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvas_setting"
+      aria-labelledby="offcanvas_setting"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Template Setting</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="mb-4">
+          <h6>Set Theme Color</h6>
+          <ul class="choose-skin list-unstyled mb-0">
+            <li data-theme="ValenciaRed">
+              <div style="--hotelair-theme-color: #d63b38"></div>
+            </li>
+            <li data-theme="SunOrange">
+              <div style="--hotelair-theme-color: #f7a614"></div>
+            </li>
+            <li data-theme="AppleGreen">
+              <div style="--hotelair-theme-color: #5bc43a"></div>
+            </li>
+            <li data-theme="CeruleanBlue">
+              <div style="--hotelair-theme-color: #00b8d6"></div>
+            </li>
+            <li data-theme="Mariner">
+              <div style="--hotelair-theme-color: #0066fe"></div>
+            </li>
+            <li data-theme="PurpleHeart" class="active">
+              <div style="--hotelair-theme-color: #6238b3"></div>
+            </li>
+            <li data-theme="FrenchRose">
+              <div style="--hotelair-theme-color: #eb5393"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="svg-stroke mb-4">
+          <h6>Icon Border Stroke</h6>
+          <div
+            class="btn-group"
+            role="group"
+            aria-label="Basic radio toggle button group"
+          >
+            <input
+              type="radio"
+              class="btn-check"
+              name="stroke"
+              id="Stroke_A"
+              value="svgstroke-a"
+              checked
+            />
+            <label class="btn btn-outline-primary" for="Stroke_A"
+              >Stroke 1</label
+            >
 
-	<!-- start: template setting, and more. -->
-	<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas_setting" aria-labelledby="offcanvas_setting">
-		<div class="offcanvas-header">
-			<h5 class="offcanvas-title">Template Setting</h5>
-			<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-		</div>
-		<div class="offcanvas-body">
-			<div class="mb-4">
-				<h6>Set Theme Color</h6>
-				<ul class="choose-skin list-unstyled mb-0">
-					<li data-theme="ValenciaRed"><div style="--hotelair-theme-color: #D63B38;"></div></li>
-					<li data-theme="SunOrange"><div style="--hotelair-theme-color: #F7A614;"></div></li>
-					<li data-theme="AppleGreen"><div style="--hotelair-theme-color: #5BC43A;"></div></li>
-					<li data-theme="CeruleanBlue"><div style="--hotelair-theme-color: #00B8D6;"></div></li>
-					<li data-theme="Mariner"><div style="--hotelair-theme-color: #0066FE;"></div></li>
-					<li data-theme="PurpleHeart" class="active"><div style="--hotelair-theme-color: #6238B3;"></div></li>
-					<li data-theme="FrenchRose"><div style="--hotelair-theme-color: #EB5393;"></div></li>
-				</ul>
-			</div>
-			<div class="svg-stroke mb-4">
-				<h6>Icon Border Stroke</h6>
-				<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-					<input type="radio" class="btn-check" name="stroke" id="Stroke_A" value="svgstroke-a" checked>
-					<label class="btn btn-outline-primary" for="Stroke_A">Stroke 1</label>
-				  
-					<input type="radio" class="btn-check" name="stroke" id="Stroke_B" value="svgstroke-b">
-					<label class="btn btn-outline-primary" for="Stroke_B">Stroke 2</label>
-				  
-					<input type="radio" class="btn-check" name="stroke" id="Stroke_C" value="svgstroke-c">
-					<label class="btn btn-outline-primary" for="Stroke_C">Stroke 3</label>
-				</div>
-			</div>
-			<div class="mb-4">
-				<h6>Layout Section Ligh/Dark</h6>
-				<ul class="list-unstyled d-flex flex-wrap">
-					<li class="me-2 mb-2 sidebar-toggle">
-						<input type="checkbox" class="btn-check" id="Sidebar_dark">
-						<label class="btn btn-outline-primary" for="Sidebar_dark">Sidebar</label>
-					</li>
-					<li class="me-2 mb-2 header-toggle">
-						<input type="checkbox" class="btn-check" id="Header_dark">
-						<label class="btn btn-outline-primary" for="Header_dark">Header</label>
-					</li>
-				</ul>
-			</div>
-			<div class="mb-4">
-				<h6>More App Setting</h6>
-				<div class="form-check form-switch bodygradient-toggle">
-					<input class="form-check-input" type="checkbox" role="switch" id="bodyGradient" checked>
-					<label class="form-check-label" for="bodyGradient">Body Gradient Background</label>
-				</div>
-				
-				<div class="form-check form-switch monochrome-toggle">
-					<input class="form-check-input fs-6" type="checkbox" role="switch" id="monochrome">
-					<label class="form-check-label" for="monochrome">Monochrome Mode</label>
-				</div>
-				<div class="form-check form-switch radius-toggle">
-					<input class="form-check-input fs-6" type="checkbox" role="switch" id="radius0">
-					<label class="form-check-label" for="radius0">Border Radius none</label>
-				</div>
-				<div class="form-check form-switch svg-icon-color">
-					<input class="form-check-input fs-6" type="checkbox" role="switch" id="IconColor">
-					<label class="form-check-label" for="IconColor">Sidebar Icon color</label>
-				</div>
-				<div class="form-check form-switch cb-shadow">
-					<input class="form-check-input fs-6" type="checkbox" role="switch" id="BoxShadow">
-					<label class="form-check-label" for="BoxShadow">Card box shadow active</label>
-				</div>
-			</div>
-			<div class="d-flex">
-				<button type="button" class="btn w-100 me-1 py-2 btn-primary">Buy Now</button>
-				<button type="button" class="btn w-100 ms-1 py-2 btn-dark">View Portfolio</button>
-			</div>
-		</div>
-	</div>
+            <input
+              type="radio"
+              class="btn-check"
+              name="stroke"
+              id="Stroke_B"
+              value="svgstroke-b"
+            />
+            <label class="btn btn-outline-primary" for="Stroke_B"
+              >Stroke 2</label
+            >
 
-	<!--[ hotelair template vender js ]-->
-	<script src="/hotel main/pixelwibes.in/templates/hotelair/html/assets/bundles/libscripts.bundle.js"></script>
-	<script src="/hotel main/pixelwibes.in/templates/hotelair/html/assets/bundles/dataTables.bundle.js"></script>      
+            <input
+              type="radio"
+              class="btn-check"
+              name="stroke"
+              id="Stroke_C"
+              value="svgstroke-c"
+            />
+            <label class="btn btn-outline-primary" for="Stroke_C"
+              >Stroke 3</label
+            >
+          </div>
+        </div>
+        <div class="mb-4">
+          <h6>Layout Section Ligh/Dark</h6>
+          <ul class="list-unstyled d-flex flex-wrap">
+            <li class="me-2 mb-2 sidebar-toggle">
+              <input type="checkbox" class="btn-check" id="Sidebar_dark" />
+              <label class="btn btn-outline-primary" for="Sidebar_dark"
+                >Sidebar</label
+              >
+            </li>
+            <li class="me-2 mb-2 header-toggle">
+              <input type="checkbox" class="btn-check" id="Header_dark" />
+              <label class="btn btn-outline-primary" for="Header_dark"
+                >Header</label
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="mb-4">
+          <h6>More App Setting</h6>
+          <div class="form-check form-switch bodygradient-toggle">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="bodyGradient"
+              checked
+            />
+            <label class="form-check-label" for="bodyGradient"
+              >Body Gradient Background</label
+            >
+          </div>
 
-	<!-- Template page js -->
-	<script src="/hotel main/pixelwibes.in/templates/hotelair/html/assets/js/main.js"></script>
+          <div class="form-check form-switch monochrome-toggle">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="monochrome"
+            />
+            <label class="form-check-label" for="monochrome"
+              >Monochrome Mode</label
+            >
+          </div>
+          <div class="form-check form-switch radius-toggle">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="radius0"
+            />
+            <label class="form-check-label" for="radius0"
+              >Border Radius none</label
+            >
+          </div>
+          <div class="form-check form-switch svg-icon-color">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="IconColor"
+            />
+            <label class="form-check-label" for="IconColor"
+              >Sidebar Icon color</label
+            >
+          </div>
+          <div class="form-check form-switch cb-shadow">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="BoxShadow"
+            />
+            <label class="form-check-label" for="BoxShadow"
+              >Card box shadow active</label
+            >
+          </div>
+        </div>
+        <div class="d-flex">
+          <button type="button" class="btn w-100 me-1 py-2 btn-primary">
+            Buy Now
+          </button>
+          <button type="button" class="btn w-100 ms-1 py-2 btn-dark">
+            View Portfolio
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Facilites-->
+    <div class="modal fade" id="add-items" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">Add Items Unit</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group mb-3">
+                <label class="form-label text-muted">Item Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Add Item Name"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label class="form-label text-muted">Short Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Add Short Name"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label class="form-label text-muted">Status Type</label>
+                <select class="form-select">
+                  <option selected>Choose Status</option>
+                  <option value="1">Active</option>
+                  <option value="2">In Active</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Facilites-->
+    <div
+      class="modal fade"
+      id="edit-facilites"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">Edit Items Unit</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group mb-3">
+                <label class="form-label text-muted">Item Name</label>
+                <input type="text" class="form-control" value="Kilogram" />
+              </div>
+              <div class="form-group mb-3">
+                <label class="form-label text-muted">Short Name</label>
+                <input type="text" class="form-control" value="kg" />
+              </div>
+              <div class="form-group mb-3">
+                <label class="form-label text-muted">Status Type</label>
+                <select class="form-select">
+                  <option selected>Active</option>
+                  <option value="1">Active</option>
+                  <option value="2">In Active</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">
+              Update changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--[ hotelair template vender js ]-->
+    <script src="/hotel main/pixelwibes.in/templates/hotelair/html/assets/bundles/libscripts.bundle.js"></script>
+    <script src="/hotel main/pixelwibes.in/templates/hotelair/html/assets/bundles/dataTables.bundle.js"></script>
+
+    <!-- Template page js -->
+    <script src="/hotel main/pixelwibes.in/templates/hotelair/html/assets/js/main.js"></script>
     <script>
-		$(document).ready( function () {
-            $('.dataTable')
-            .addClass( 'nowrap' )
-            .dataTable( {
-                responsive: true,
-            });
+      $(document).ready(function () {
+        $(".dataTable").addClass("nowrap").dataTable({
+          responsive: true,
         });
+      });
+    </script>
+  </body>
 
-	</script>
-</body>
-
-<!-- Mirrored from pixelwibes.in/templates/hotelair/html/stock-report.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:31:47 GMT -->
+  <!-- Mirrored from pixelwibes.in/templates/hotelair/html/items-unit-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:31:45 GMT -->
 </html>
