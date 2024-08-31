@@ -18,43 +18,43 @@
 
 	<!--[ Template main css file ]-->
 	<link rel="stylesheet" href="assets/css/style.min.css">
+ <link rel="stylesheet" href="assets/css/Super-Admin.css">
 
 </head>
 
-<body data-theme="theme-PurpleHeart" class="svgstroke-a bg-gradient">
-	  
+<body data-theme="theme-Custom" class="svgstroke-a bg-gradient"> 
+
 	<main class="container-fluid px-0">
-		
+
 		<!-- start: page menu link -->
-		<aside class="ps-xl-5 ps-lg-4 ps-3 pe-2 py-3 sidebar sticky-top" data-bs-theme="none">
+	<aside class="ps-xl-5 ps-lg-4 ps-3 pe-2 py-3 sidebar sticky-top" data-bs-theme="none">
 			<nav class="navbar navbar-expand-xl py-0">
 				<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvas_Navbar">
 					<div class="offcanvas-header">
-						<span class="fw-bold fs-5 text-gradient">HotelAir</span>
+						<span class="fw-bold fs-5 text-gradient">X-Empire</span>
 						<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 					</div>
 					<div class="offcanvas-body flex-column custom_scroll ps-4 ps-xl-0">
 						<div class="d-flex align-items-start mb-4">
 							<img class="avatar lg rounded-circle border border-3" src="assets/images/profile_av.png" alt="avatar">
 							<div class="ms-3 mt-1">
-								<h4 class="mb-0 text-gradient title-font">Anny glover</h4>
+								<h4 class="mb-0 text-gradient title-font">MR Admin</h4>
 								<span class="text-muted">Super Admin</span>
 							</div>
 						</div>
 						<!-- start: Menu tab -->
 						<ul class="nav nav-tabs tab-dynamic px-0 mb-4" role="tablist" style="--dynamic-color: var(--accent-color)">
-							<li class="nav-item" role="presentation"><a class="ps-2 pe-3 nav-link" data-bs-toggle="tab" href="#tab_hotels" role="tab" aria-selected="false" tabindex="-1">HOTELS</a></li>
-                            <li class="nav-item" role="presentation"><a class="ps-2 pe-3 nav-link active" data-bs-toggle="tab" href="#tab_hrms" role="tab" aria-selected="true">HRMS</a></li>
-							<li class="nav-item" role="presentation"><a class="ps-2 pe-3 nav-link" data-bs-toggle="tab" href="#tab_settings" role="tab" aria-selected="false" tabindex="-1">TUNING</a></li>
+							<li class="nav-item" role="presentation"><a class="ps-2 pe-3 nav-link active" data-bs-toggle="tab" href="#tab_hotels" role="tab" aria-selected="false" tabindex="-1">HOTELS</a></li>
+                          
                         </ul>
 						<!-- start: Menu content -->
 						<div class="tab-content">
 							<!-- start: Hotel tab-->
-							<div class="tab-pane fade " id="tab_hotels" role="tabpanel">
+							<div class="tab-pane fade active show" id="tab_hotels" role="tabpanel">
 								<h6 class="fl-title title-font ps-2 small text-uppercase text-muted" style="--dynamic-color: var(--theme-color1)">Universal</h6>
 								<ul class="list-unstyled mb-4 menu-list">
 									<li>
-										<a href="index.html" aria-label="Hotel Dashboard">
+										<a class="active" href="index.html" aria-label="Hotel Dashboard">
 											<svg class="svg-stroke" xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 												<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
 												<path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
@@ -139,7 +139,7 @@
 											<li><a href="housekeeping-report.html" aria-label="Housekeeping Reports">Cleaning Report</a></li>
 										</ul>
 									</li>
-									<li>
+									<!-- <li>
 										<a href="#CarbookingMenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle" aria-label="Users">
 											<svg xmlns="http://www.w3.org/2000/svg" class="svg-stroke" width="24" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 												<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -154,7 +154,7 @@
 											<li><a href="cab-list.html" aria-label="Cab Details">Cab List</a></li>
 											<li><a href="cab-booking.html" aria-label="Cab Booking">Cab Booking</a></li>
 										</ul>
-									</li>
+									</li> -->
 									<li>
 										<a href="#ItemsManageMenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle" aria-label="Users">
 											<svg xmlns="http://www.w3.org/2000/svg" class="svg-stroke" width="24" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -219,11 +219,16 @@
 								</ul>
 							</div>
 							<!-- start: HR tab -->
-							<div class="tab-pane fade active show" id="tab_hrms" role="tabpanel">
+							 	<ul class="nav nav-tabs tab-dynamic px-0 mb-4" role="tablist" style="--dynamic-color: var(--accent-color)">
+							
+                            <li class="nav-item" role="presentation"><a class="ps-2 pe-3 nav-link" data-bs-toggle="tab" href="#tab_hrms" role="tab" aria-selected="true">HRMS</a></li>
+							
+                        </ul>
+							<div class="tab-pane fade" id="tab_hrms" role="tabpanel">
 								<h6 class="fl-title title-font ps-2 small text-uppercase text-muted" style="--dynamic-color: var(--theme-color1)">Usual</h6>
 								<ul class="list-unstyled mb-4 menu-list">
 									<li>
-										<a class="active" href="index-hr.html" aria-label="HRMS Dashboard">
+										<a href="index-hr.html" aria-label="HRMS Dashboard">
 											<svg class="svg-stroke" xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 												<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
 												<path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
@@ -285,6 +290,11 @@
 								</ul>
 							</div>
 							<!-- start: Setting tab-->
+							 	<ul class="nav nav-tabs tab-dynamic px-0 mb-4" role="tablist" style="--dynamic-color: var(--accent-color)">
+							
+                           
+							<li class="nav-item" role="presentation"><a class="ps-2 pe-3 nav-link" data-bs-toggle="tab" href="#tab_settings" role="tab" aria-selected="false" tabindex="-1">TUNING</a></li>
+                        </ul>
 							<div class="tab-pane fade" id="tab_settings" role="tabpanel">
 								<h6 class="fl-title title-font ps-2 small text-uppercase text-muted" style="--dynamic-color: var(--theme-color1)">Configuration</h6>
 								<ul class="list-unstyled mb-4 menu-list">
@@ -445,13 +455,7 @@
 						</button>
 						<!--[ Start:: Brand Logo icon ]-->
 						<a href="index.html" class="brand-icon text-decoration-none d-flex align-items-center" title="HotelAir Admin Template">
-							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-								<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-								<path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
-								<path d="M9 8l0 8" />
-								<path d="M9 12l6 0" />
-								<path d="M15 8l0 8" />
-							</svg>
+							
 							<span class="fw-bold ps-2 fs-5 d-none d-xl-inline-flex text-gradient">HotelAir</span>
 						</a>
 					</div>
@@ -469,7 +473,7 @@
 							<div class="tagcloud mb-4">
 								<a href="hotels.html" class="tag-link rounded-pill border px-3" style="--hover-color: var(--theme-color1)">Hotel</a>
 								<a href="room-booking.html" class="tag-link rounded-pill border px-3" style="--hover-color: var(--theme-color2)">Room Booking</a>
-								<a href="cab-booking.html" class="tag-link rounded-pill border px-3" style="--hover-color: var(--theme-color1)">Cab Booking</a>
+								
 							</div>
 							<h6 class="fl-title" style="--dynamic-color: var(--theme-color2)">Help</h6>
 							<div class="d-flex flex-column mb-4">
