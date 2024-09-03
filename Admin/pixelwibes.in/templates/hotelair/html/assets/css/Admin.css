@@ -88,6 +88,9 @@
     height: 22vh;
 }
 
+
+
+
 @media (max-width: 850px) {
     
     .box-holder{
@@ -105,3 +108,4 @@
 }
 
 }
+
