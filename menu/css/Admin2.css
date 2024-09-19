@@ -1,0 +1,209 @@
+/* Root Theme Variables */
+:root {
+    --body-color: #ffffff;
+    --reverse-color: #17161a;
+    --reverse-color-white: 255, 255, 255;
+    --reverse-color-black: 0, 0, 0;
+    --bs-border-color: #e4e9ed;
+    --light-bg1: #efefef;
+    --light-bg2: #E3E3EB;
+    --light-bg3: #E2F2E8;
+    --light-bg4: #E7EAEE;
+    --light-bg5: #F7F2ED;
+    --light-bg6: #E3F1F5;
+}
+
+[data-theme="theme-Custom"] {
+    --primary-color: #FFC107;
+    --accent-color: #FF8F00;
+    --primary-rgb: 255, 193, 7;
+    --accent-rgb: 254, 226, 119;
+
+    --theme-color1: #FFC107;
+    --theme-color2: #FFB300;
+    --theme-color3: #FFA000;
+    --theme-color4: #FEE277;
+    --theme-color5: #FF6F00;
+    --theme-color6: #FF5722;
+
+    --primary-hover: #FFD54F;
+    --accent-hover: #FFECB3;
+
+    --primary-gradient: linear-gradient(-45deg, var(--primary-color), var(--accent-color));
+}
+
+/* Global Styles */
+body {
+    background-color: var(--body-color);
+    color: var(--reverse-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: screen;
+}
+
+/* Header */
+header {
+    background: var(--primary-gradient);
+    color: var(--reverse-color-white);
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.menu-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+/* Menu Section */
+.menu-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.menu-item {
+    background-color: var(--light-bg1);
+    border: 1px solid var(--bs-border-color);
+    border-radius: 8px;
+    width: 300px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(var(--reverse-color-black), 0.2);
+}
+
+.menu-item h3 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    font-size: 1rem;
+    color: var(--reverse-color);
+    margin-bottom: 15px;
+}
+
+.menu-item .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* Buttons */
+.btn {
+    background-color: var(--primary-color);
+    color: var(--reverse-color-white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+    background-color: var(--accent-color);
+    color: var(--reverse-color-white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Footer */
+footer {
+    background-color: var(--light-bg6);
+    color: var(--reverse-color);
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* gallery filter */
+.gallery_sort {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    white-space: nowrap;
+}
+
+ul.gallery_sort li {
+    margin: 0 5px 5px;
+}
+
+ul.gallery_sort li button:focus {
+    outline: none;
+}
+
+ ul.gallery_sort li a button.active,
+ul.gallery_sort li a button:hover {
+  background: var(--accent-hover);
+  color: var(--theme-color5);
+  transition: all 0.3s;
+} 
+
+ul.gallery_sort li button {
+    display: block;
+    padding: 12px 25px;
+    background: #fff;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+    outline: none;
+    transition: all .3s;
+}
+
+.gallery_top_menu {
+    margin-bottom: 14px;
+}
+
+.gallery_sort li button.active {
+    position: relative;
+
+}
+
+.gallery_sort li button.active::before {
+    left: 0;
+}
+
+.filter {
+    padding: 7px;
+}
