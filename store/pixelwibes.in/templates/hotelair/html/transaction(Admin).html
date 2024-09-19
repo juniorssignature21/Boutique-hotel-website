@@ -821,1046 +821,122 @@
           </ul>
         </div> -->
         <!-- start: page body area -->
-        <div class="px-xl-5 px-lg-4 px-3 py-3 page-body">
-          <div class="row mb-3">
-            <div class="col-sm-12">
-              <div
-                class="d-flex align-items-center justify-content-between flex-wrap"
-              >
-                <h3 class="fw-bold mb-0">Transaction</h3>
+        <div class="content">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+              <h1>Order History</h1>
+              <div class="input-group" style="width: 300px;">
+                  <input type="text" class="form-control" placeholder="Search">
+                  <button class="btn btn-outline-secondary" type="button">Search</button>
               </div>
-            </div>
           </div>
-
-          <ul class="row g-3 list-unstyled row-deck">
-            <li class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-              <div class="card rounded-4 p-xl-3">
-                <div class="card-body d-flex align-items-start">
-                  <div class="avatar rounded no-thumbnail">
-                    <i class="fa fa-cc-mastercard"></i>
-                  </div>
-                  <div class="ms-3 me-auto">
-                    <h5 class="fw-normal theme-text-color1 mb-1">Bill</h5>
-                    <p>$2,500.00</p>
-                    <div id="apexspark-Bill"></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-              <div class="card rounded-4 p-xl-3">
-                <div class="card-body d-flex align-items-start">
-                  <div class="avatar rounded no-thumbnail">
-                    <i class="fa fa-cutlery"></i>
-                  </div>
-                  <div class="ms-3 me-auto">
-                    <h5 class="fw-normal theme-text-color2 mb-1">Food</h5>
-                    <p>$22,300.00</p>
-                    <div id="apexspark-Food"></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-              <div class="card rounded-4 p-xl-3">
-                <div class="card-body d-flex align-items-start">
-                  <div class="avatar rounded no-thumbnail">
-                    <i class="fa fa-cc-mastercard"></i>
-                  </div>
-                  <div class="ms-3 me-auto">
-                    <h5 class="fw-normal theme-text-color3 mb-1">Utility</h5>
-                    <p>$730.00</p>
-                    <div id="apexspark-Utility"></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-              <div class="card rounded-4 p-xl-3">
-                <div class="card-body d-flex align-items-start">
-                  <div class="avatar rounded no-thumbnail">
-                    <i class="fa fa-shopping-basket"></i>
-                  </div>
-                  <div class="ms-3 me-auto">
-                    <h5 class="fw-normal theme-text-color4 mb-1">Shopping</h5>
-                    <p>$5,500.00</p>
-                    <div id="apexspark-Shopping"></div>
-                  </div>
-                </div>
-              </div>
-            </li>
+          <ul class="nav nav-tabs">
+              <li class="nav-item">
+                  <a class="nav-link active" href="#">All Orders</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Summary</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Completed</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Cancelled</a>
+              </li>
           </ul>
-          <!--[ ul.row end ]-->
-
-          <div class="border border-primary p-4 rounded-2 rounded-4">
-            <div
-              class="calendar-tab pb-4"
-              style="--dynamic-color:#FFC107"
-            >
-              <ul
-                class="nav nav-pills text-muted text-uppercase"
-                role="tablist"
-              >
-                <li class="nav-item">
-                  Sun
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_1"
-                    type="button"
-                    role="tab"
-                  >
-                    01
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Mon
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_2"
-                    type="button"
-                    role="tab"
-                  >
-                    02
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Tue
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_3"
-                    type="button"
-                    role="tab"
-                  >
-                    03
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Wed
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_4"
-                    type="button"
-                    role="tab"
-                  >
-                    04
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Thu
-                  <button
-                    class="nav-link active"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_5"
-                    type="button"
-                    role="tab"
-                  >
-                    05
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Fri
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_6"
-                    type="button"
-                    role="tab"
-                  >
-                    06
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Sat
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_7"
-                    type="button"
-                    role="tab"
-                  >
-                    07
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Sun
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_8"
-                    type="button"
-                    role="tab"
-                  >
-                    08
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Mon
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_9"
-                    type="button"
-                    role="tab"
-                  >
-                    09
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Tue
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_10"
-                    type="button"
-                    role="tab"
-                  >
-                    10
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Wed
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_11"
-                    type="button"
-                    role="tab"
-                  >
-                    11
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Thu
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_12"
-                    type="button"
-                    role="tab"
-                  >
-                    12
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Fri
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_13"
-                    type="button"
-                    role="tab"
-                  >
-                    13
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Sat
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_14"
-                    type="button"
-                    role="tab"
-                  >
-                    14
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Sun
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_15"
-                    type="button"
-                    role="tab"
-                  >
-                    15
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Sun
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_16"
-                    type="button"
-                    role="tab"
-                  >
-                    16
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Mon
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_17"
-                    type="button"
-                    role="tab"
-                  >
-                    17
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Tue
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_18"
-                    type="button"
-                    role="tab"
-                  >
-                    18
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Wed
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_19"
-                    type="button"
-                    role="tab"
-                  >
-                    19
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Thu
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_20"
-                    type="button"
-                    role="tab"
-                  >
-                    20
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Fri
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_21"
-                    type="button"
-                    role="tab"
-                  >
-                    21
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Sat
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_22"
-                    type="button"
-                    role="tab"
-                  >
-                    22
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Sun
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_23"
-                    type="button"
-                    role="tab"
-                  >
-                    23
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Mon
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_24"
-                    type="button"
-                    role="tab"
-                  >
-                    24
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Tue
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_25"
-                    type="button"
-                    role="tab"
-                  >
-                    25
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Wed
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_26"
-                    type="button"
-                    role="tab"
-                  >
-                    26
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Thu
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_27"
-                    type="button"
-                    role="tab"
-                  >
-                    27
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Fri
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_28"
-                    type="button"
-                    role="tab"
-                  >
-                    28
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Sat
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_29"
-                    type="button"
-                    role="tab"
-                  >
-                    29
-                  </button>
-                </li>
-                <li class="nav-item">
-                  Sun
-                  <button
-                    class="nav-link"
-                    data-bs-toggle="pill"
-                    data-bs-target="#c_date_30"
-                    type="button"
-                    role="tab"
-                  >
-                    30
-                  </button>
-                </li>
-              </ul>
-            </div>
-            <table
-              class="table align-middle table-hover dataTable table-body"
-              style="width: 100%"
-            >
-              <thead>
-                <tr class="small text-muted text-uppercase">
-                  <th>
-                    <div class="form-check mb-0" style="font-size: 16px">
-                      <input
-                        class="form-check-input select-all"
-                        type="checkbox"
-                        value=""
-                      />
-                    </div>
-                  </th>
-                  <th>Product Description</th>
-                  <th>Status</th>
-                  <th>Price</th>
-                  <th>Order No.</th>
-                  <th>Order Total</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="row-selectable">
-                  <td>
-                    <div class="form-check mb-0">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                      />
-                    </div>
-                  </td>
-                  <td class="fs-6">Gas Bill Payment</td>
-                  <td class="text-primary">Your order is successful</td>
-                  <td>$500.00</td>
-                  <td>
-                    B-123123
-                    <div class="small text-muted">22 5:08 pm</div>
-                  </td>
-                  <td>$500.00</td>
-                  <td>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-sm text-muted"
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      title="Send Email"
-                    >
-                      <i class="fa fa-envelope"></i>
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-sm text-muted"
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      title="Download invoice"
-                    >
-                      <i class="fa fa-download"></i>
-                    </button>
-                  </td>
-                </tr>
-                <tr class="row-selectable">
-                  <td>
-                    <div class="form-check mb-0">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                      />
-                    </div>
-                  </td>
-                  <td class="fs-6">Electricity Bill</td>
-                  <td class="text-primary">successful</td>
-                  <td>$1000.00</td>
-                  <td>
-                    M-123123
-                    <div class="small text-muted">22 5:08 pm</div>
-                  </td>
-                  <td>$1000.00</td>
-                  <td>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-sm text-muted"
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      title="Send Email"
-                    >
-                      <i class="fa fa-envelope"></i>
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-sm text-muted"
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      title="Download invoice"
-                    >
-                      <i class="fa fa-download"></i>
-                    </button>
-                  </td>
-                </tr>
-                <tr class="row-selectable">
-                  <td>
-                    <div class="form-check mb-0">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                      />
-                    </div>
-                  </td>
-                  <td class="fs-6">Hotel Tax Bill</td>
-                  <td class="text-primary">Booking Confirmed</td>
-                  <td>$45.00</td>
-                  <td>
-                    B-123123
-                    <div class="small text-muted">22 5:08 pm</div>
-                  </td>
-                  <td>$46.00</td>
-                  <td>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-sm text-muted"
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      title="Send Email"
-                    >
-                      <i class="fa fa-envelope"></i>
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-sm text-muted"
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      title="Download invoice"
-                    >
-                      <i class="fa fa-download"></i>
-                    </button>
-                  </td>
-                </tr>
-                <tr class="row-selectable">
-                  <td>
-                    <div class="form-check mb-0">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                      />
-                    </div>
-                  </td>
-                  <td class="fs-6">Hotel Tv Recharge</td>
-                  <td class="text-primary">Recharge successful</td>
-                  <td>$99.90</td>
-                  <td>
-                    R-123123
-                    <div class="small text-muted">22 5:08 pm</div>
-                  </td>
-                  <td>$99.90</td>
-                  <td>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-sm text-muted"
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      title="Send Email"
-                    >
-                      <i class="fa fa-envelope"></i>
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-sm text-muted"
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      title="Download invoice"
-                    >
-                      <i class="fa fa-download"></i>
-                    </button>
-                  </td>
-                </tr>
-                <tr class="row-selectable">
-                  <td>
-                    <div class="form-check mb-0">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                      />
-                    </div>
-                  </td>
-                  <td class="fs-6">Hotelair Pharmacy</td>
-                  <td class="text-primary">Your order is successful</td>
-                  <td>$122.00</td>
-                  <td>
-                    B-123123
-                    <div class="small text-muted">22 5:08 pm</div>
-                  </td>
-                  <td>$122.00</td>
-                  <td>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-sm text-muted"
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      title="Send Email"
-                    >
-                      <i class="fa fa-envelope"></i>
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-sm text-muted"
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      title="Download invoice"
-                    >
-                      <i class="fa fa-download"></i>
-                    </button>
-                  </td>
-                </tr>
-                <tr class="row-selectable">
-                  <td>
-                    <div class="form-check mb-0">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                      />
-                    </div>
-                  </td>
-                  <td class="fs-6">Gas Bill Payment</td>
-                  <td class="text-primary">Your order is successful</td>
-                  <td>$500.00</td>
-                  <td>
-                    B-123123
-                    <div class="small text-muted">22 5:08 pm</div>
-                  </td>
-                  <td>$500.00</td>
-                  <td>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-sm text-muted"
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      title="Send Email"
-                    >
-                      <i class="fa fa-envelope"></i>
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-sm text-muted"
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      title="Download invoice"
-                    >
-                      <i class="fa fa-download"></i>
-                    </button>
-                  </td>
-                </tr>
-                <tr class="row-selectable">
-                  <td>
-                    <div class="form-check mb-0">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                      />
-                    </div>
-                  </td>
-                  <td class="fs-6">Electricity Bill</td>
-                  <td class="text-primary">successful</td>
-                  <td>$1000.00</td>
-                  <td>
-                    M-123123
-                    <div class="small text-muted">22 5:08 pm</div>
-                  </td>
-                  <td>$1000.00</td>
-                  <td>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-sm text-muted"
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      title="Send Email"
-                    >
-                      <i class="fa fa-envelope"></i>
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-sm text-muted"
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      title="Download invoice"
-                    >
-                      <i class="fa fa-download"></i>
-                    </button>
-                  </td>
-                </tr>
-                <tr class="row-selectable">
-                  <td>
-                    <div class="form-check mb-0">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                      />
-                    </div>
-                  </td>
-                  <td class="fs-6">Hotel Tax Bill</td>
-                  <td class="text-primary">Booking Confirmed</td>
-                  <td>$45.00</td>
-                  <td>
-                    B-123123
-                    <div class="small text-muted">22 5:08 pm</div>
-                  </td>
-                  <td>$46.00</td>
-                  <td>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-sm text-muted"
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      title="Send Email"
-                    >
-                      <i class="fa fa-envelope"></i>
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-sm text-muted"
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      title="Download invoice"
-                    >
-                      <i class="fa fa-download"></i>
-                    </button>
-                  </td>
-                </tr>
-                <tr class="row-selectable">
-                  <td>
-                    <div class="form-check mb-0">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                      />
-                    </div>
-                  </td>
-                  <td class="fs-6">Hotel Tv Recharge</td>
-                  <td class="text-primary">Recharge successful</td>
-                  <td>$99.90</td>
-                  <td>
-                    R-123123
-                    <div class="small text-muted">22 5:08 pm</div>
-                  </td>
-                  <td>$99.90</td>
-                  <td>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-sm text-muted"
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      title="Send Email"
-                    >
-                      <i class="fa fa-envelope"></i>
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-sm text-muted"
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      title="Download invoice"
-                    >
-                      <i class="fa fa-download"></i>
-                    </button>
-                  </td>
-                </tr>
-                <tr class="row-selectable">
-                  <td>
-                    <div class="form-check mb-0">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                      />
-                    </div>
-                  </td>
-                  <td class="fs-6">Hotelair Pharmacy</td>
-                  <td class="text-primary">Your order is successful</td>
-                  <td>$122.00</td>
-                  <td>
-                    B-123123
-                    <div class="small text-muted">22 5:08 pm</div>
-                  </td>
-                  <td>$122.00</td>
-                  <td>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-sm text-muted"
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      title="Send Email"
-                    >
-                      <i class="fa fa-envelope"></i>
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-sm text-muted"
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      title="Download invoice"
-                    >
-                      <i class="fa fa-download"></i>
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="table-responsive">
+              <table class="table table-striped">
+                  <thead>
+                      <tr>
+                          <th>S No</th>
+                          <th>Order ID</th>
+                          <th>Order Name</th>
+                          <th>Stock Value</th>
+                          <th>Quantity</th>
+                          <th>Status</th>
+                          <th>Action</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>1</td>
+                          <td>83 HKDH</td>
+                          <td>Earphones</td>
+                          <td>343K</td>
+                          <td>23K</td>
+                          <td><span class="badge bg-success">Delivered</span></td>
+                          <td><button class="btn btn-primary btn-sm">View</button></td>
+                      </tr>
+                      <tr>
+                          <td>2</td>
+                          <td>83 KDH</td>
+                          <td>Marketing</td>
+                          <td>834K</td>
+                          <td>20K</td>
+                          <td><span class="badge bg-danger">Cancelled</span></td>
+                          <td><button class="btn btn-primary btn-sm">View</button></td>
+                      </tr>
+                      <tr>
+                          <td>3</td>
+                          <td>83 HKDH</td>
+                          <td>Design</td>
+                          <td>73K</td>
+                          <td>14K</td>
+                          <td><span class="badge bg-success">Delivered</span></td>
+                          <td><button class="btn btn-primary btn-sm">View</button></td>
+                      </tr>
+                      <tr>
+                          <td>4</td>
+                          <td>63 HDH</td>
+                          <td>Marketing</td>
+                          <td>28K</td>
+                          <td>11K</td>
+                          <td><span class="badge bg-success">Delivered</span></td>
+                          <td><button class="btn btn-primary btn-sm">View</button></td>
+                      </tr>
+                      <tr>
+                          <td>5</td>
+                          <td>63 HKH</td>
+                          <td>Design</td>
+                          <td>23K</td>
+                          <td>7K</td>
+                          <td><span class="badge bg-danger">Cancelled</span></td>
+                          <td><button class="btn btn-primary btn-sm">View</button></td>
+                      </tr>
+                      <tr>
+                          <td>6</td>
+                          <td>83 K2DH</td>
+                          <td>Marketing</td>
+                          <td>63K</td>
+                          <td>35K</td>
+                          <td><span class="badge bg-success">Delivered</span></td>
+                          <td><button class="btn btn-primary btn-sm">View</button></td>
+                      </tr>
+                      <tr>
+                          <td>7</td>
+                          <td>13 HOH</td>
+                          <td>Design</td>
+                          <td>38X</td>
+                          <td>1000K</td>
+                          <td><span class="badge bg-danger">Cancelled</span></td>
+                          <td><button class="btn btn-primary btn-sm">View</button></td>
+                      </tr>
+                  </tbody>
+              </table>
           </div>
-        </div>
+          <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-center">
+                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+          </nav>
+      </div>
       </div>
     </main>
 
-    <!-- start: template setting, and more. -->
-    <!-- <div
-      class="offcanvas offcanvas-end"
-      tabindex="-1"
-      id="offcanvas_setting"
-      aria-labelledby="offcanvas_setting"
-    >
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title">Template Setting</h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="offcanvas-body">
-        <div class="mb-4">
-          <h6>Set Theme Color</h6>
-          <ul class="choose-skin list-unstyled mb-0">
-            <li data-theme="ValenciaRed">
-              <div style="--hotelair-theme-color: #d63b38"></div>
-            </li>
-            <li data-theme="SunOrange">
-              <div style="--hotelair-theme-color: #f7a614"></div>
-            </li>
-            <li data-theme="AppleGreen">
-              <div style="--hotelair-theme-color: #5bc43a"></div>
-            </li>
-            <li data-theme="CeruleanBlue">
-              <div style="--hotelair-theme-color: #00b8d6"></div>
-            </li>
-            <li data-theme="Mariner">
-              <div style="--hotelair-theme-color: #0066fe"></div>
-            </li>
-            <li data-theme="PurpleHeart" class="active">
-              <div style="--hotelair-theme-color: #6238b3"></div>
-            </li>
-            <li data-theme="FrenchRose">
-              <div style="--hotelair-theme-color: #eb5393"></div>
-            </li>
-          </ul>
-        </div>
-        <div class="svg-stroke mb-4">
-          <h6>Icon Border Stroke</h6>
-          <div
-            class="btn-group"
-            role="group"
-            aria-label="Basic radio toggle button group"
-          >
-            <input
-              type="radio"
-              class="btn-check"
-              name="stroke"
-              id="Stroke_A"
-              value="svgstroke-a"
-              checked
-            />
-            <label class="btn btn-outline-primary" for="Stroke_A"
-              >Stroke 1</label
-            >
-
-            <input
-              type="radio"
-              class="btn-check"
-              name="stroke"
-              id="Stroke_B"
-              value="svgstroke-b"
-            />
-            <label class="btn btn-outline-primary" for="Stroke_B"
-              >Stroke 2</label
-            >
-
-            <input
-              type="radio"
-              class="btn-check"
-              name="stroke"
-              id="Stroke_C"
-              value="svgstroke-c"
-            />
-            <label class="btn btn-outline-primary" for="Stroke_C"
-              >Stroke 3</label
-            >
-          </div>
-        </div>
-        <div class="mb-4">
-          <h6>Layout Section Ligh/Dark</h6>
-          <ul class="list-unstyled d-flex flex-wrap">
-            <li class="me-2 mb-2 sidebar-toggle">
-              <input type="checkbox" class="btn-check" id="Sidebar_dark" />
-              <label class="btn btn-outline-primary" for="Sidebar_dark"
-                >Sidebar</label
-              >
-            </li>
-            <li class="me-2 mb-2 header-toggle">
-              <input type="checkbox" class="btn-check" id="Header_dark" />
-              <label class="btn btn-outline-primary" for="Header_dark"
-                >Header</label
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="mb-4">
-          <h6>More App Setting</h6>
-          <div class="form-check form-switch bodygradient-toggle">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              role="switch"
-              id="bodyGradient"
-              checked
-            />
-            <label class="form-check-label" for="bodyGradient"
-              >Body Gradient Background</label
-            >
-          </div>
-
-          <div class="form-check form-switch monochrome-toggle">
-            <input
-              class="form-check-input fs-6"
-              type="checkbox"
-              role="switch"
-              id="monochrome"
-            />
-            <label class="form-check-label" for="monochrome"
-              >Monochrome Mode</label
-            >
-          </div>
-          <!-- <div class="form-check form-switch gradient-active">
-					<input class="form-check-input fs-6" type="checkbox" role="switch" id="gradient-active">
-					<label class="form-check-label" for="gradient-active">Gradient Active</label>
-				</div> -->
-          <!-- <div class="form-check form-switch radius-toggle">
-            <input
-              class="form-check-input fs-6"
-              type="checkbox"
-              role="switch"
-              id="radius0"
-            />
-            <label class="form-check-label" for="radius0"
-              >Border Radius none</label
-            >
-          </div>
-          <div class="form-check form-switch svg-icon-color">
-            <input
-              class="form-check-input fs-6"
-              type="checkbox"
-              role="switch"
-              id="IconColor"
-            />
-            <label class="form-check-label" for="IconColor"
-              >Sidebar Icon color</label
-            >
-          </div>
-          <div class="form-check form-switch cb-shadow">
-            <input
-              class="form-check-input fs-6"
-              type="checkbox"
-              role="switch"
-              id="BoxShadow"
-            />
-            <label class="form-check-label" for="BoxShadow"
-              >Card box shadow active</label
-            >
-          </div>
-        </div>
-        <div class="d-flex">
-          <button type="button" class="btn w-100 me-1 py-2 btn-dark">
-            Buy Now
-          </button>
-          <button type="button" class="btn w-100 ms-1 py-2 btn-dark">
-            View Portfolio
-          </button>
-        </div>
-      </div>
-    </div> --> 
-
+   
     <!--[ hotelair template vender js ]-->
     <script src="assets/bundles/libscripts.bundle.js"></script>
     <script src="assets/bundles/dataTables.bundle.js"></script>
