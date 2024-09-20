@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Mirrored from pixelwibes.in/templates/hotelair/html/checkin-payment.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:32:51 GMT -->
   <head>
-    <title>: HotelAir : Hotel Management Admin Dashboard Template</title>
+    <title>: X-EMPIRE: Hotel Management Admin Dashboard</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta
@@ -16,7 +15,11 @@
     <meta name="keyword" content="bootstrap admin template" />
 
     <!--[ Favicon]-->
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../assets/images/favicon.ico"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -34,13 +37,23 @@
       sizes="180x180"
       href="../assets/images/apple-touch-icon.png"
     />
-
+    <!-- preline and tailwind........... -->
+    <link
+      rel="stylesheet"
+      href="./node_modules/apexcharts/dist/apexcharts.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/preline@1.0.0/dist/preline.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/preline@1.0.0/dist/preline.min.js"></script>
+    <link href="" rel="stylesheet" />
+   <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css -->
     <link rel="stylesheet" href="../assets/vendor/dataTables.min.css" />
-
     <!--[ Template main css file ]-->
     <link rel="stylesheet" href="../assets/css/style.min.css" />
     <link rel="stylesheet" href="../assets/css/Admin.css" />
-    <link rel="stylesheet" href="../assets/css/Theme.min.css" />
   </head>
 
   <body data-theme="theme-Custom" class="svgstroke-a bg-gradient">
@@ -58,9 +71,7 @@
             id="offcanvas_Navbar"
           >
             <div class="offcanvas-header">
-              <span class="fw-bold fs-5 text-gradient"
-                >X <small>-</small>Empire</span
-              >
+              <span class="fw-bold fs-5 text-gradient border-3">X-Empire</span>
               <button
                 type="button"
                 class="btn-close btn-close-white"
@@ -76,10 +87,11 @@
                   alt="avatar"
                 />
                 <div class="ms-3 mt-1">
-                  <h4 class="mb-0 text-gradient title-font">Anny glover</h4>
-                  <span class="text-muted">Super Admin</span>
+                  <h4 class="mb-0 text-gradient title-font">MR Admin</h4>
+                  <span class="text-muted"> Admin</span>
                 </div>
               </div>
+
               <!-- start: Menu tab -->
               <ul
                 class="nav nav-tabs tab-dynamic px-0 mb-4"
@@ -97,27 +109,6 @@
                     >HOTELS</a
                   >
                 </li>
-                <li class="nav-item" role="presentation">
-                  <a
-                    class="ps-2 pe-3 nav-link"
-                    data-bs-toggle="tab"
-                    href="#tab_hrms"
-                    role="tab"
-                    aria-selected="true"
-                    >HRMS</a
-                  >
-                </li>
-                <li class="nav-item" role="presentation">
-                  <a
-                    class="ps-2 pe-3 nav-link"
-                    data-bs-toggle="tab"
-                    href="#tab_settings"
-                    role="tab"
-                    aria-selected="false"
-                    tabindex="-1"
-                    >TUNING</a
-                  >
-                </li>
               </ul>
               <!-- start: Menu content -->
               <div class="tab-content">
@@ -128,14 +119,18 @@
                   role="tabpanel"
                 >
                   <h6
-                    class="fl-title title-font ps-2 small text-uppercase text-muted"
+                    class="fl-title title-font ps-2 small text-uppercase text-muted py-3"
                     style="--dynamic-color: var(--theme-color1)"
                   >
                     Universal
                   </h6>
                   <ul class="list-unstyled mb-4 menu-list">
                     <li>
-                      <a href="index.html" aria-label="Hotel Dashboard">
+                      <a
+                        class="active"
+                        href="index(Admin).html"
+                        aria-label="Hotel Dashboard"
+                      >
                         <svg
                           class="svg-stroke"
                           xmlns="http://www.w3.org/2000/svg"
@@ -161,7 +156,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="hotels.html" aria-label="Hotel Front">
+                      <a href="Hotel(Admin).html" aria-label="Hotel Front">
                         <svg
                           class="svg-stroke"
                           xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +179,10 @@
                       </a>
                     </li>
                     <li>
-                      <a href="transaction.html" aria-label="Transaction list">
+                      <a
+                        href="transaction(Admin).html"
+                        aria-label="Transaction list"
+                      >
                         <svg
                           class="svg-stroke"
                           xmlns="http://www.w3.org/2000/svg"
@@ -212,7 +210,7 @@
                       <a
                         href="#RoomMenu"
                         data-bs-toggle="collapse"
-                        aria-expanded="true"
+                        aria-expanded="false"
                         class="dropdown-toggle"
                         aria-label="Users"
                       >
@@ -235,7 +233,7 @@
                         </svg>
                         <span class="mx-3">Room Book</span>
                       </a>
-                      <ul class="collapse list-unstyled show" id="RoomMenu">
+                      <ul class="collapse list-unstyled" id="RoomMenu">
                         <li>
                           <a
                             href="room-booking-list.html"
@@ -244,10 +242,7 @@
                           >
                         </li>
                         <li>
-                          <a
-                            class="active"
-                            href="checkin-out.html"
-                            aria-label="Room Checkout"
+                          <a href="checkin-out.html" aria-label="Room Checkout"
                             >Room Checkout</a
                           >
                         </li>
@@ -375,47 +370,8 @@
                         </li>
                       </ul>
                     </li>
-                    <li>
-                      <a
-                        href="#CarbookingMenu"
-                        data-bs-toggle="collapse"
-                        aria-expanded="false"
-                        class="dropdown-toggle"
-                        aria-label="Users"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="svg-stroke"
-                          width="24"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                          <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                          <path
-                            d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5"
-                          />
-                        </svg>
-                        <span class="mx-3">Cab Facility</span>
-                      </a>
-                      <ul class="collapse list-unstyled" id="CarbookingMenu">
-                        <li>
-                          <a href="cab-list.html" aria-label="Cab Details"
-                            >Cab List</a
-                          >
-                        </li>
-                        <li>
-                          <a href="cab-booking.html" aria-label="Cab Booking"
-                            >Cab Booking</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
+
+                     <li>
                       <a
                         href="#ItemsManageMenu"
                         data-bs-toggle="collapse"
@@ -483,6 +439,10 @@
                         </li>
                       </ul>
                     </li>
+
+
+
+
                     <li>
                       <a
                         href="#PersonalisedMenu"
@@ -544,6 +504,48 @@
                         </li>
                       </ul>
                     </li>
+
+                  
+                    <li>
+                      <a
+                        href="#pos"
+                        data-bs-toggle="collapse"
+                        aria-expanded="false"
+                        class="dropdown-toggle"
+                        aria-label="Users"
+                      >
+                        <i class="bi bi-bag"></i>
+                        <span class="mx-3">P-O-S</span>
+                      </a>
+                      <ul id="pos" class="collapse list-unstyled">
+                        <li>
+                          <a href="product-list.html" aria-label=""
+                            >Product list</a
+                          >
+                        </li>
+                        <li>
+                          <a href="reform.html" aria-label="">Reform</a>
+                        </li>
+                        <li>
+                          <a href="product-cart.html" aria-label=""
+                            >Product Cart</a
+                          >
+                        </li>
+                        <li>
+                          <a href="pos-user.html" aria-label="">Pos User</a>
+                        </li>
+                        <li>
+                          <a href="discount.html" aria-label="">Discount</a>
+                        </li>
+                      </ul>
+                    </li>
+
+
+
+
+
+
+                    
                     <li class="py-2 mt-2">
                       <h6
                         class="fl-title title-font ps-2 small text-uppercase text-muted"
@@ -554,25 +556,28 @@
                       <ul class="list-unstyled">
                         <li>
                           <a
-                            href="booking-report.html"
+                            href="booking-report(Admin).html"
                             aria-label="Booking Reports"
                             >Booking Reports</a
                           >
                         </li>
                         <li>
                           <a
-                            href="purchase-report.html"
+                            href="purchase-reports(Admin).html"
                             aria-label="Purchase Report"
                             >Purchase Reports</a
                           >
                         </li>
                         <li>
-                          <a href="stock-report.html" aria-label="Stock Report"
+                          <a
+                            href="stock-report(Admin).html"
+                            aria-label="Stock Report"
                             >Stock Reports</a
                           >
                         </li>
                       </ul>
                     </li>
+
                     <li class="py-2 mt-2">
                       <h6
                         class="fl-title title-font ps-2 small text-uppercase text-muted"
@@ -582,51 +587,53 @@
                       </h6>
                       <ul class="list-unstyled">
                         <li>
-                          <a href="bed-list.html" aria-label="Bed List"
+                          <a href="bed-list(Admin).html" aria-label="Bed List"
                             >Bed List</a
                           >
                         </li>
                         <li>
                           <a
-                            href="booking-type-list.html"
+                            href="booking-type-list(Admin).html"
                             aria-label="Booking Type List"
                             >Booking Type List</a
                           >
                         </li>
                         <li>
                           <a
-                            href="commission-list.html"
+                            href="commission-list(Admin).html"
                             aria-label="Booking Commission "
                             >Booking Commission
                           </a>
                         </li>
                         <li>
                           <a
-                            href="complementary-list.html"
+                            href="complementary-list(Admin).html"
                             aria-label="Complementary"
                             >Complementary List</a
                           >
                         </li>
                         <li>
                           <a
-                            href="floor-plan-list.html"
+                            href="floor-plan-list(Admin).html"
                             aria-label="Floor Plan List"
                             >Floor Plan List</a
                           >
                         </li>
                         <li>
-                          <a href="room-list.html" aria-label="Room List"
+                          <a href="room-list(Admin).html" aria-label="Room List"
                             >Room List</a
                           >
                         </li>
                         <li>
-                          <a href="room-image.html" aria-label="Room Images"
+                          <a
+                            href="room-image(Admin).html"
+                            aria-label="Room Images"
                             >Room Images</a
                           >
                         </li>
                         <li>
                           <a
-                            href="promocode-list.html"
+                            href="promocode-list(Admin).html"
                             aria-label="Promocode List"
                             >Promocode List</a
                           >
@@ -636,6 +643,23 @@
                   </ul>
                 </div>
                 <!-- start: HR tab -->
+
+                <ul
+                  class="nav nav-tabs tab-dynamic px-0 mb-4"
+                  role="tablist"
+                  style="--dynamic-color: var(--accent-color)"
+                >
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="ps-2 pe-3 nav-link"
+                      data-bs-toggle="tab"
+                      href="#tab_hrms"
+                      role="tab"
+                      aria-selected="true"
+                      >HRMS</a
+                    >
+                  </li>
+                </ul>
                 <div class="tab-pane fade" id="tab_hrms" role="tabpanel">
                   <h6
                     class="fl-title title-font ps-2 small text-uppercase text-muted"
@@ -842,369 +866,172 @@
                   </ul>
                 </div>
                 <!-- start: Setting tab-->
-                <div class="tab-pane fade" id="tab_settings" role="tabpanel">
-                  <h6
-                    class="fl-title title-font ps-2 small text-uppercase text-muted"
-                    style="--dynamic-color: var(--theme-color1)"
+                <!-- <ul
+                class="nav nav-tabs tab-dynamic px-0 mb-4"
+                role="tablist"
+                style="--dynamic-color: var(--accent-color)"
+              >
+					 <li class="nav-item" role="presentation">
+                  <a
+                    class="ps-2 pe-3 nav-link"
+                    data-bs-toggle="tab"
+                    href="#tab_settings"
+                    role="tab"
+                    aria-selected="false"
+                    tabindex="-1"
+                    >TUNING</a
                   >
-                    Configuration
-                  </h6>
-                  <ul class="list-unstyled mb-4 menu-list">
-                    <li>
-                      <a href="tuning.html" aria-label="tuning">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="svg-stroke"
-                          width="24"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <path
-                            d="M19.875 6.27a2.225 2.225 0 0 1 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z"
-                          />
-                          <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-                        </svg>
-                        <span class="mx-3">Tuning</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="common-settings.html" aria-label="payment set">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="svg-stroke"
-                          width="24"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <path d="M3 21l18 0" />
-                          <path d="M5 21v-14l8 -4v18" />
-                          <path d="M19 21v-10l-6 -4" />
-                          <path d="M9 9l0 .01" />
-                          <path d="M9 12l0 .01" />
-                          <path d="M9 15l0 .01" />
-                          <path d="M9 18l0 .01" />
-                        </svg>
-                        <span class="mx-3">Common</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="payment-set.html" aria-label="payment set">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="svg-stroke"
-                          width="24"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <path
-                            d="M12 19h-6a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v4.5"
-                          />
-                          <path d="M3 10h18" />
-                          <path d="M16 19h6" />
-                          <path d="M19 16l3 3l-3 3" />
-                          <path d="M7.005 15h.005" />
-                          <path d="M11 15h2" />
-                        </svg>
-                        <span class="mx-3">Payment Set</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="accounts-setting.html"
-                        aria-label="Accounts Setting"
-                      >
-                        <svg
-                          class="svg-stroke"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path
-                            stroke="none"
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          ></path>
-                          <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-                          <path
-                            d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
-                          ></path>
-                          <path d="M9 7l1 0"></path>
-                          <path d="M9 13l6 0"></path>
-                          <path d="M13 17l2 0"></path>
-                        </svg>
-                        <span class="mx-3">Accounts</span>
-                      </a>
-                    </li>
-                    <li class="py-2 mt-2">
-                      <h6
-                        class="fl-title title-font ps-2 small text-uppercase text-muted"
-                        style="--dynamic-color: var(--theme-color1)"
-                      >
-                        Role Managment
-                      </h6>
-                      <ul class="list-unstyled">
-                        <li>
-                          <a href="role-add.html" aria-label="Role Add"
-                            >Role Add</a
-                          >
-                        </li>
-                        <li>
-                          <a href="role-list.html" aria-label="Role List"
-                            >Role List</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            href="role-permission.html"
-                            aria-label="Role Permission"
-                            >Role Permission</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            href="role-create-list.html"
-                            aria-label="Role Create List"
-                            >Role Create</a
-                          >
-                        </li>
-                        <li>
-                          <a href="role-assign.html" aria-label="Role Assign"
-                            >Role Assign</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            href="role-access-list.html"
-                            aria-label="Role Access"
-                            >Role Access</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="py-2 mt-2">
-                      <h6
-                        class="fl-title title-font ps-2 small text-uppercase text-muted"
-                        style="--dynamic-color: var(--theme-color1)"
-                      >
-                        Front Pages
-                      </h6>
-                      <ul class="list-unstyled">
-                        <li>
-                          <a href="about-us.html" aria-label="About Us"
-                            >About Us</a
-                          >
-                        </li>
-                        <li>
-                          <a href="contact-us.html" aria-label="Contact Us"
-                            >Contact Us</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            href="privacy-policy.html"
-                            aria-label="Privacy Policy"
-                            >Privacy Policy</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            href="terms-conditions.html"
-                            aria-label="Terms Conditions"
-                            >Terms Conditions</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="py-2 mt-2">
-                      <h6
-                        class="fl-title title-font ps-2 small text-uppercase text-muted"
-                        style="--dynamic-color: var(--theme-color1)"
-                      >
-                        Application
-                      </h6>
-                      <ul class="list-unstyled">
-                        <li>
-                          <a href="calendar.html" aria-label="Calendar"
-                            >My Calendar</a
-                          >
-                        </li>
-                        <li>
-                          <a href="inbox.html" aria-label="Inbox">Inbox (98)</a>
-                        </li>
-                        <li>
-                          <a href="chat.html" aria-label="Chat">Chat (2)</a>
-                        </li>
-                        <li>
-                          <a href="blog.html" aria-label="Blog">Blog Article</a>
-                        </li>
-                        <li>
-                          <a href="filemanager.html" aria-label="File Manager"
-                            >File Manager</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <!-- start: More Pages -->
-                  <h6
-                    class="fl-title title-font ps-2 small text-uppercase text-muted"
-                    style="--dynamic-color: var(--theme-color4)"
-                  >
-                    Pages
-                  </h6>
-                  <ul class="list-unstyled mb-4 menu-list">
-                    <li>
-                      <a
-                        href="#Authentication"
-                        data-bs-toggle="collapse"
-                        aria-expanded="false"
-                        class="dropdown-toggle"
-                        aria-label="Authentication"
-                      >
-                        <svg
-                          class="svg-stroke"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path
-                            stroke="none"
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          ></path>
-                          <path
-                            d="M11.5 21h-4.5a2 2 0 0 1 -2 -2v-6a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2"
-                          ></path>
-                          <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path>
-                          <path d="M8 11v-4a4 4 0 1 1 8 0v4"></path>
-                          <path d="M20 21l2 -2l-2 -2"></path>
-                          <path d="M17 17l-2 2l2 2"></path>
-                        </svg>
-                        <span class="mx-3">Authentication</span>
-                      </a>
-                      <ul class="collapse list-unstyled" id="Authentication">
-                        <li><a href="signin.html">Sign in</a></li>
-                        <li><a href="signup.html">Sign up</a></li>
-                        <li>
-                          <a href="password-reset.html">Password reset</a>
-                        </li>
-                        <li>
-                          <a href="two-step.html">2-Step Authentication</a>
-                        </li>
-                        <li><a href="lockscreen.html">Lockscreen</a></li>
-                        <li><a href="maintenance.html">Maintenance</a></li>
-                        <li><a href="404.html">404</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="search.html" aria-label="Search page">
-                        <svg
-                          class="svg-stroke"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path
-                            stroke="none"
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          ></path>
-                          <path
-                            d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"
-                          ></path>
-                          <path d="M21 21l-6 -6"></path>
-                        </svg>
-                        <span class="mx-3">Search page</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="docs/index.html"
-                        aria-label="Template documentation"
-                      >
-                        <svg
-                          class="svg-stroke"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path
-                            stroke="none"
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          ></path>
-                          <path
-                            d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1"
-                          ></path>
-                        </svg>
-                        <span class="mx-3">Documentation</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="changelog.html"
-                        title="Template Changelog"
-                        aria-label="Template Changelog"
-                      >
-                        <svg
-                          class="svg-stroke"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path
-                            stroke="none"
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          ></path>
-                          <path
-                            d="M10.09 4.01l.496 -.495a2 2 0 0 1 2.828 0l7.071 7.07a2 2 0 0 1 0 2.83l-7.07 7.07a2 2 0 0 1 -2.83 0l-7.07 -7.07a2 2 0 0 1 0 -2.83l3.535 -3.535h-3.988"
-                          ></path>
-                          <path d="M7.05 11.038v-3.988"></path>
-                        </svg>
-                        <span class="mx-3">Changelog: <b>v1.0</b></span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                </li>
+                                 </ul>
+							 <div class="tab-pane fade" id="tab_settings" role="tabpanel">
+								<h6 class="fl-title title-font ps-2 small text-uppercase text-muted" style="--dynamic-color: var(--theme-color1)">Configuration</h6>
+								<ul class="list-unstyled mb-4 menu-list">
+									<li>
+										<a href="tuning.html" aria-label="tuning">
+											<svg xmlns="http://www.w3.org/2000/svg" class="svg-stroke" width="24" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+												<path d="M19.875 6.27a2.225 2.225 0 0 1 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" />
+												<path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+											</svg>
+											<span class="mx-3">Tuning</span>
+										</a>
+									</li>
+									<li>
+										<a href="common-settings.html" aria-label="payment set">
+											<svg xmlns="http://www.w3.org/2000/svg" class="svg-stroke" width="24" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+												<path d="M3 21l18 0" />
+												<path d="M5 21v-14l8 -4v18" />
+												<path d="M19 21v-10l-6 -4" />
+												<path d="M9 9l0 .01" />
+												<path d="M9 12l0 .01" />
+												<path d="M9 15l0 .01" />
+												<path d="M9 18l0 .01" />
+											</svg>
+											<span class="mx-3">Common</span>
+										</a>
+									</li>
+									<li>
+										<a href="payment-set.html" aria-label="payment set">
+											<svg xmlns="http://www.w3.org/2000/svg" class="svg-stroke" width="24" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+												<path d="M12 19h-6a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v4.5" />
+												<path d="M3 10h18" />
+												<path d="M16 19h6" />
+												<path d="M19 16l3 3l-3 3" />
+												<path d="M7.005 15h.005" />
+												<path d="M11 15h2" />
+											</svg>
+											<span class="mx-3">Payment Set</span>
+										</a>
+									</li>
+									<li>
+										<a href="accounts-setting.html" aria-label="Accounts Setting">
+											<svg class="svg-stroke" xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+												<path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+												<path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
+												<path d="M9 7l1 0"></path>
+												<path d="M9 13l6 0"></path>
+												<path d="M13 17l2 0"></path>
+											</svg>
+											<span class="mx-3">Accounts</span>
+										</a>
+									</li>
+									<li class="py-2 mt-2">
+										<h6 class="fl-title title-font ps-2 small text-uppercase text-muted" style="--dynamic-color: var(--theme-color1)">Role Managment</h6>
+										<ul class="list-unstyled">
+											<li><a href="role-add.html" aria-label="Role Add">Role Add</a></li>
+											<li><a href="role-list.html" aria-label="Role List">Role List</a></li>
+											<li><a href="role-permission.html" aria-label="Role Permission">Role Permission</a></li>
+											<li><a href="role-create-list.html" aria-label="Role Create List">Role Create</a></li>
+											<li><a href="role-assign.html" aria-label="Role Assign">Role Assign</a></li>
+											<li><a href="role-access-list.html" aria-label="Role Access">Role Access</a></li>
+										</ul>
+									</li>
+									<li class="py-2 mt-2">
+                                       <h6 class="fl-title title-font ps-2 small text-uppercase text-muted" style="--dynamic-color: var(--theme-color1)">Front Pages</h6>
+										<ul class="list-unstyled">
+											<li><a href="about-us.html" aria-label="About Us">About Us</a></li>
+											<li><a href="contact-us.html" aria-label="Contact Us">Contact Us</a></li>
+											<li><a href="privacy-policy.html" aria-label="Privacy Policy">Privacy Policy</a></li>
+											<li><a href="terms-conditions.html" aria-label="Terms Conditions">Terms Conditions</a></li>
+										</ul>
+									</li>
+									<li class="py-2 mt-2">
+										<h6 class="fl-title title-font ps-2 small text-uppercase text-muted" style="--dynamic-color: var(--theme-color1)">Application</h6>
+										<ul class="list-unstyled">
+											<li><a href="calendar.html" aria-label="Calendar">My Calendar</a></li>
+											<li><a href="inbox.html" aria-label="Inbox">Inbox (98)</a></li>
+											<li><a href="chat.html" aria-label="Chat">Chat (2)</a></li>
+											<li><a href="blog.html" aria-label="Blog">Blog Article</a></li>
+											<li><a href="filemanager.html" aria-label="File Manager">File Manager</a></li>
+										</ul>
+									</li>
+								</ul>  -->
+                <!-- start: More Pages -->
+                <!-- <h6 class="fl-title title-font ps-2 small text-uppercase text-muted" style="--dynamic-color: var(--theme-color4)">Pages</h6>
+								<ul class="list-unstyled mb-4 menu-list">
+									<li>
+										<a href="#Authentication" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle" aria-label="Authentication">
+											<svg class="svg-stroke" xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+												<path d="M11.5 21h-4.5a2 2 0 0 1 -2 -2v-6a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2"></path>
+												<path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path>
+												<path d="M8 11v-4a4 4 0 1 1 8 0v4"></path>
+												<path d="M20 21l2 -2l-2 -2"></path>
+												<path d="M17 17l-2 2l2 2"></path>
+											</svg>
+											<span class="mx-3">Authentication</span>
+										</a>
+										<ul class="collapse list-unstyled" id="Authentication">
+											<li><a href="signin.html">Sign in</a></li>
+											<li><a href="signup.html">Sign up</a></li>
+											<li><a href="password-reset.html">Password reset</a></li>
+											<li><a href="two-step.html">2-Step Authentication</a></li>
+											<li><a href="lockscreen.html">Lockscreen</a></li>
+											<li><a href="maintenance.html">Maintenance</a></li>
+											<li><a href="404.html">404</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="search.html" aria-label="Search page">
+											<svg class="svg-stroke" xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+												<path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+												<path d="M21 21l-6 -6"></path>
+											</svg>
+											<span class="mx-3">Search page</span>
+										</a>
+									</li>
+									<li>
+										<a href="docs/index.html" aria-label="Template documentation">
+											<svg class="svg-stroke" xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+												<path d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1"></path>
+											</svg>
+											<span class="mx-3">Documentation</span>
+										</a>
+									</li>
+									<li>
+										<a href="changelog.html" title="Template Changelog" aria-label="Template Changelog">
+											<svg class="svg-stroke" xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+												<path d="M10.09 4.01l.496 -.495a2 2 0 0 1 2.828 0l7.071 7.07a2 2 0 0 1 0 2.83l-7.07 7.07a2 2 0 0 1 -2.83 0l-7.07 -7.07a2 2 0 0 1 0 -2.83l3.535 -3.535h-3.988"></path>
+												<path d="M7.05 11.038v-3.988"></path>
+											</svg>
+											<span class="mx-3">Changelog: <b>v1.0</b></span>
+										</a>
+									</li>
+								</ul>
+							</div>  -->
               </div>
             </div>
           </div>
         </nav>
       </aside>
 
+
+      
       <div class="content">
         <!-- start: page header -->
         <header class="px-xl-5 px-lg-4 px-3 sticky-top" data-bs-theme="none">
@@ -1958,18 +1785,9 @@
         <div class="px-xl-5 px-lg-4 px-3 py-2 page-header">
           <ol class="breadcrumb mb-0 bg-transparent">
             <li class="breadcrumb-item">
-              <a href="index.html" title="home">Home</a>
+              <a href="tuning.html" title="tuning">Home</a>
             </li>
-            <li class="breadcrumb-item">
-              <a href="checkin-out.html" title="Checkin-Out">Checkin-Out</a>
-            </li>
-            <li
-              class="breadcrumb-item active"
-              aria-current="page"
-              title="Payment Detail"
-            >
-              Payment Detail
-            </li>
+         
           </ol>
           <ul class="list-unstyled action d-flex align-items-center mb-0">
             <li class="dropdown">
@@ -2102,389 +1920,388 @@
               <div
                 class="d-flex align-items-center justify-content-between flex-wrap"
               >
-                <h3 class="fw-bold mb-0">Payment Detail</h3>
+                <h3 class="fw-bold mb-0">Pos User</h3>
+                <div class="col-auto d-flex w-sm-100">
+                  <button
+                    type="button"
+                    class="btn btn-dark"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#add-room"
+                    aria-controls="add-room"
+                  >
+                    Add Room
+                  </button>
+                </div>
               </div>
             </div>
+
             <div class="col-sm-12">
               <div class="card">
                 <div class="card-body">
-                  <div class="row g-3">
-                    <div class="col-md-5 col-lg-4 order-md-last">
-                      <h4
-                        class="d-flex justify-content-between align-items-center mb-3"
-                      >
-                        <span class="text-primary">Your cart</span>
-                        <span class="badge bg-primary rounded-pill">3</span>
-                      </h4>
-                      <ul class="list-group mb-3">
-                        <li
-                          class="list-group-item d-flex justify-content-between lh-sm"
-                        >
-                          <div>
-                            <h6 class="my-0">Product name</h6>
-                            <small class="text-body-secondary"
-                              >Brief description</small
-                            >
-                          </div>
-                          <span class="text-body-secondary">$12</span>
-                        </li>
-                        <li
-                          class="list-group-item d-flex justify-content-between lh-sm"
-                        >
-                          <div>
-                            <h6 class="my-0">Second product</h6>
-                            <small class="text-body-secondary"
-                              >Brief description</small
-                            >
-                          </div>
-                          <span class="text-body-secondary">$8</span>
-                        </li>
-                        <li
-                          class="list-group-item d-flex justify-content-between lh-sm"
-                        >
-                          <div>
-                            <h6 class="my-0">Third item</h6>
-                            <small class="text-body-secondary"
-                              >Brief description</small
-                            >
-                          </div>
-                          <span class="text-body-secondary">$5</span>
-                        </li>
-                        <li
-                          class="list-group-item d-flex justify-content-between bg-body-tertiary"
-                        >
-                          <div class="text-success">
-                            <h6 class="my-0">Promo code</h6>
-                            <small>EXAMPLECODE</small>
-                          </div>
-                          <span class="text-success">−$5</span>
-                        </li>
-                        <li
-                          class="list-group-item d-flex justify-content-between"
-                        >
-                          <span>Total (USD)</span>
-                          <strong>$20</strong>
-                        </li>
-                      </ul>
-
-                      <form class="card p-2">
-                        <div class="input-group">
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Promo code"
-                          />
-                          <button type="submit" class="btn btn-secondary">
-                            Redeem
+                  <table
+                    class="table dataTable align-middle table-hover table-body"
+                    style="width: 100%"
+                  >
+                    <thead>
+                      <tr>
+                        <th>Id</th>
+                        <th>Room Type</th>
+                        <th>Room Price</th>
+                        <th>Bed Charge</th>
+                        <th>Capacity</th>
+                        <th>Room Size</th>
+                        <th>Bed No</th>
+                        <th>Bed Type</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Vip Guest</td>
+                        <td>4000</td>
+                        <td>100</td>
+                        <td>3</td>
+                        <td>King</td>
+                        <td>2</td>
+                        <td>Standard Double</td>
+                        <td>
+                          <button
+                            type="button"
+                            class="btn"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#edit-room"
+                            aria-controls="edit-room"
+                          >
+                            <i class="bi bi-pencil-square"></i>
                           </button>
-                        </div>
-                      </form>
-                    </div>
-                    <div class="col-md-7 col-lg-8">
-                      <h6 class="mb-3">Billing address</h6>
-                      <form class="needs-validation" novalidate="">
-                        <div class="row g-3">
-                          <div class="col-sm-6">
-                            <label for="firstName" class="form-label"
-                              >First name</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="firstName"
-                              placeholder=""
-                              value=""
-                              required=""
-                            />
-                            <div class="invalid-feedback">
-                              Valid first name is required.
-                            </div>
-                          </div>
-
-                          <div class="col-sm-6">
-                            <label for="lastName" class="form-label"
-                              >Last name</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="lastName"
-                              placeholder=""
-                              value=""
-                              required=""
-                            />
-                            <div class="invalid-feedback">
-                              Valid last name is required.
-                            </div>
-                          </div>
-
-                          <div class="col-12">
-                            <label for="username" class="form-label"
-                              >Username</label
-                            >
-                            <div class="input-group has-validation">
-                              <span class="input-group-text">@</span>
-                              <input
-                                type="text"
-                                class="form-control"
-                                id="username"
-                                placeholder="Username"
-                                required=""
-                              />
-                              <div class="invalid-feedback">
-                                Your username is required.
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-12">
-                            <label for="email" class="form-label"
-                              >Email
-                              <span class="text-body-secondary"
-                                >(Optional)</span
-                              ></label
-                            >
-                            <input
-                              type="email"
-                              class="form-control"
-                              id="email"
-                              placeholder="you@example.com"
-                            />
-                            <div class="invalid-feedback">
-                              Please enter a valid email address for shipping
-                              updates.
-                            </div>
-                          </div>
-
-                          <div class="col-12">
-                            <label for="address" class="form-label"
-                              >Address</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="address"
-                              placeholder="1234 Main St"
-                              required=""
-                            />
-                            <div class="invalid-feedback">
-                              Please enter your shipping address.
-                            </div>
-                          </div>
-
-                          <div class="col-12">
-                            <label for="address2" class="form-label"
-                              >Address 2
-                              <span class="text-body-secondary"
-                                >(Optional)</span
-                              ></label
-                            >
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="address2"
-                              placeholder="Apartment or suite"
-                            />
-                          </div>
-
-                          <div class="col-md-5">
-                            <label for="country" class="form-label"
-                              >Country</label
-                            >
-                            <select
-                              class="form-select"
-                              id="country"
-                              required=""
-                            >
-                              <option value="">Choose...</option>
-                              <option>United States</option>
-                            </select>
-                            <div class="invalid-feedback">
-                              Please select a valid country.
-                            </div>
-                          </div>
-
-                          <div class="col-md-4">
-                            <label for="state" class="form-label">State</label>
-                            <select class="form-select" id="state" required="">
-                              <option value="">Choose...</option>
-                              <option>California</option>
-                            </select>
-                            <div class="invalid-feedback">
-                              Please provide a valid state.
-                            </div>
-                          </div>
-
-                          <div class="col-md-3">
-                            <label for="zip" class="form-label">Zip</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="zip"
-                              placeholder=""
-                              required=""
-                            />
-                            <div class="invalid-feedback">
-                              Zip code required.
-                            </div>
-                          </div>
-                        </div>
-
-                        <hr class="my-4" />
-
-                        <div class="form-check">
-                          <input
-                            type="checkbox"
-                            class="form-check-input"
-                            id="same-address"
-                          />
-                          <label class="form-check-label" for="same-address"
-                            >Shipping address is the same as my billing
-                            address</label
+                          <button type="button" class="btn deleterow">
+                            <i class="bi bi-trash text-danger"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Vip</td>
+                        <td>10000</td>
+                        <td>400</td>
+                        <td>20</td>
+                        <td>King</td>
+                        <td>1</td>
+                        <td>Electric Bed</td>
+                        <td>
+                          <button
+                            type="button"
+                            class="btn"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#edit-room"
+                            aria-controls="edit-room"
                           >
-                        </div>
-
-                        <div class="form-check">
-                          <input
-                            type="checkbox"
-                            class="form-check-input"
-                            id="save-info"
-                          />
-                          <label class="form-check-label" for="save-info"
-                            >Save this information for next time</label
+                            <i class="bi bi-pencil-square"></i>
+                          </button>
+                          <button type="button" class="btn deleterow">
+                            <i class="bi bi-trash text-danger"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Family Room</td>
+                        <td>4500</td>
+                        <td>150</td>
+                        <td>4</td>
+                        <td>Queen</td>
+                        <td>2</td>
+                        <td>Standard Queen</td>
+                        <td>
+                          <button
+                            type="button"
+                            class="btn"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#edit-room"
+                            aria-controls="edit-room"
                           >
-                        </div>
-
-                        <hr class="my-4" />
-
-                        <h4 class="mb-3">Payment</h4>
-
-                        <div class="my-3">
-                          <div class="form-check">
-                            <input
-                              id="credit"
-                              name="paymentMethod"
-                              type="radio"
-                              class="form-check-input"
-                              checked=""
-                              required=""
-                            />
-                            <label class="form-check-label" for="credit"
-                              >Credit card</label
-                            >
-                          </div>
-                          <div class="form-check">
-                            <input
-                              id="debit"
-                              name="paymentMethod"
-                              type="radio"
-                              class="form-check-input"
-                              required=""
-                            />
-                            <label class="form-check-label" for="debit"
-                              >Debit card</label
-                            >
-                          </div>
-                          <div class="form-check">
-                            <input
-                              id="paypal"
-                              name="paymentMethod"
-                              type="radio"
-                              class="form-check-input"
-                              required=""
-                            />
-                            <label class="form-check-label" for="paypal"
-                              >PayPal</label
-                            >
-                          </div>
-                        </div>
-
-                        <div class="row gy-3">
-                          <div class="col-md-6">
-                            <label for="cc-name" class="form-label"
-                              >Name on card</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="cc-name"
-                              placeholder=""
-                              required=""
-                            />
-                            <small class="text-body-secondary"
-                              >Full name as displayed on card</small
-                            >
-                            <div class="invalid-feedback">
-                              Name on card is required
-                            </div>
-                          </div>
-
-                          <div class="col-md-6">
-                            <label for="cc-number" class="form-label"
-                              >Credit card number</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="cc-number"
-                              placeholder=""
-                              required=""
-                            />
-                            <div class="invalid-feedback">
-                              Credit card number is required
-                            </div>
-                          </div>
-
-                          <div class="col-md-3">
-                            <label for="cc-expiration" class="form-label"
-                              >Expiration</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="cc-expiration"
-                              placeholder=""
-                              required=""
-                            />
-                            <div class="invalid-feedback">
-                              Expiration date required
-                            </div>
-                          </div>
-
-                          <div class="col-md-3">
-                            <label for="cc-cvv" class="form-label">CVV</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="cc-cvv"
-                              placeholder=""
-                              required=""
-                            />
-                            <div class="invalid-feedback">
-                              Security code required
-                            </div>
-                          </div>
-                        </div>
-
-                        <hr class="my-4" />
-
-                        <button
-                          class="w-100 btn btn-primary btn-lg"
-                          type="submit"
-                        >
-                          Continue to checkout
-                        </button>
-                      </form>
-                    </div>
-                  </div>
+                            <i class="bi bi-pencil-square"></i>
+                          </button>
+                          <button type="button" class="btn deleterow">
+                            <i class="bi bi-trash text-danger"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Deluxe Suite</td>
+                        <td>5500</td>
+                        <td>130</td>
+                        <td>3</td>
+                        <td>King</td>
+                        <td>1</td>
+                        <td>Luxury King</td>
+                        <td>
+                          <button
+                            type="button"
+                            class="btn"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#edit-room"
+                            aria-controls="edit-room"
+                          >
+                            <i class="bi bi-pencil-square"></i>
+                          </button>
+                          <button type="button" class="btn deleterow">
+                            <i class="bi bi-trash text-danger"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>Standard Room</td>
+                        <td>3000</td>
+                        <td>80</td>
+                        <td>2</td>
+                        <td>Queen</td>
+                        <td>1</td>
+                        <td>Standard Queen</td>
+                        <td>
+                          <button
+                            type="button"
+                            class="btn"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#edit-room"
+                            aria-controls="edit-room"
+                          >
+                            <i class="bi bi-pencil-square"></i>
+                          </button>
+                          <button type="button" class="btn deleterow">
+                            <i class="bi bi-trash text-danger"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>Single Room</td>
+                        <td>2500</td>
+                        <td>70</td>
+                        <td>1</td>
+                        <td>Twin</td>
+                        <td>1</td>
+                        <td>Standard Twin</td>
+                        <td>
+                          <button
+                            type="button"
+                            class="btn"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#edit-room"
+                            aria-controls="edit-room"
+                          >
+                            <i class="bi bi-pencil-square"></i>
+                          </button>
+                          <button type="button" class="btn deleterow">
+                            <i class="bi bi-trash text-danger"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td>Executive Room</td>
+                        <td>4500</td>
+                        <td>110</td>
+                        <td>2</td>
+                        <td>Queen</td>
+                        <td>2</td>
+                        <td>Luxury Queen</td>
+                        <td>
+                          <button
+                            type="button"
+                            class="btn"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#edit-room"
+                            aria-controls="edit-room"
+                          >
+                            <i class="bi bi-pencil-square"></i>
+                          </button>
+                          <button type="button" class="btn deleterow">
+                            <i class="bi bi-trash text-danger"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>Presidential Suite</td>
+                        <td>8000</td>
+                        <td>200</td>
+                        <td>6</td>
+                        <td>King</td>
+                        <td>3</td>
+                        <td>Luxury King</td>
+                        <td>
+                          <button
+                            type="button"
+                            class="btn"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#edit-room"
+                            aria-controls="edit-room"
+                          >
+                            <i class="bi bi-pencil-square"></i>
+                          </button>
+                          <button type="button" class="btn deleterow">
+                            <i class="bi bi-trash text-danger"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td>Double Room</td>
+                        <td>3500</td>
+                        <td>90</td>
+                        <td>2</td>
+                        <td>King</td>
+                        <td>1</td>
+                        <td>Standard King</td>
+                        <td>
+                          <button
+                            type="button"
+                            class="btn"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#edit-room"
+                            aria-controls="edit-room"
+                          >
+                            <i class="bi bi-pencil-square"></i>
+                          </button>
+                          <button type="button" class="btn deleterow">
+                            <i class="bi bi-trash text-danger"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <td>Family Suite</td>
+                        <td>6000</td>
+                        <td>160</td>
+                        <td>5</td>
+                        <td>King</td>
+                        <td>2</td>
+                        <td>Luxury King</td>
+                        <td>
+                          <button
+                            type="button"
+                            class="btn"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#edit-room"
+                            aria-controls="edit-room"
+                          >
+                            <i class="bi bi-pencil-square"></i>
+                          </button>
+                          <button type="button" class="btn deleterow">
+                            <i class="bi bi-trash text-danger"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>11</td>
+                        <td>Junior Suite</td>
+                        <td>4800</td>
+                        <td>140</td>
+                        <td>3</td>
+                        <td>Queen</td>
+                        <td>1</td>
+                        <td>Luxury Queen</td>
+                        <td>
+                          <button
+                            type="button"
+                            class="btn"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#edit-room"
+                            aria-controls="edit-room"
+                          >
+                            <i class="bi bi-pencil-square"></i>
+                          </button>
+                          <button type="button" class="btn deleterow">
+                            <i class="bi bi-trash text-danger"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>12</td>
+                        <td>King Suite</td>
+                        <td>7000</td>
+                        <td>180</td>
+                        <td>4</td>
+                        <td>King</td>
+                        <td>2</td>
+                        <td>Luxury King</td>
+                        <td>
+                          <button
+                            type="button"
+                            class="btn"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#edit-room"
+                            aria-controls="edit-room"
+                          >
+                            <i class="bi bi-pencil-square"></i>
+                          </button>
+                          <button type="button" class="btn deleterow">
+                            <i class="bi bi-trash text-danger"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>13</td>
+                        <td>Twin Room</td>
+                        <td>3200</td>
+                        <td>85</td>
+                        <td>2</td>
+                        <td>Twin</td>
+                        <td>2</td>
+                        <td>Standard Twin</td>
+                        <td>
+                          <button
+                            type="button"
+                            class="btn"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#edit-room"
+                            aria-controls="edit-room"
+                          >
+                            <i class="bi bi-pencil-square"></i>
+                          </button>
+                          <button type="button" class="btn deleterow">
+                            <i class="bi bi-trash text-danger"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>14</td>
+                        <td>Signal Room</td>
+                        <td>1600</td>
+                        <td>300</td>
+                        <td>1</td>
+                        <td>Small</td>
+                        <td>1</td>
+                        <td>Normal Bed</td>
+                        <td>
+                          <button
+                            type="button"
+                            class="btn"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#edit-room"
+                            aria-controls="edit-room"
+                          >
+                            <i class="bi bi-pencil-square"></i>
+                          </button>
+                          <button type="button" class="btn deleterow">
+                            <i class="bi bi-trash text-danger"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
           </div>
+          <!-- Row End -->
         </div>
       </div>
     </main>
-
     <!-- start: template setting, and more. -->
     <div
       class="offcanvas offcanvas-end"
@@ -2657,7 +2474,239 @@
         </div>
       </div>
     </div>
-
+    <!-- Add: Room -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="add-room"
+      aria-labelledby="add-room"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Add Room</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <form>
+          <div class="form-group mb-3">
+            <label class="form-label text-muted"
+              >Room Type <span class="text-warning">*</span></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Add Room Type"
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label text-muted"
+              >Capacity <span class="text-warning">*</span></label
+            >
+            <input type="number" class="form-control" placeholder="Capacity" />
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label text-muted"
+              >Extra Capability <span class="text-warning">*</span></label
+            >
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Extra Capability"
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label text-muted"
+              >Room Price<span class="text-warning">*</span></label
+            >
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Room Price"
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label text-muted"
+              >Bed Charge<span class="text-warning">*</span></label
+            >
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Bed Charge"
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label text-muted"
+              >Room Size<span class="text-warning">*</span></label
+            >
+            <select class="form-select">
+              <option selected>Choose Room Size</option>
+              <option value="1">Singal</option>
+              <option value="2">Double</option>
+              <option value="3">Tripal</option>
+              <option value="4">Quad</option>
+              <option value="6">Queen</option>
+              <option value="7">King</option>
+              <option value="8">Others</option>
+            </select>
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label text-muted"
+              >Bed Number<span class="text-warning">*</span></label
+            >
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Bed Number"
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label text-muted"
+              >Bed Type<span class="text-warning">*</span></label
+            >
+            <select class="form-select">
+              <option selected>Choose Room Size</option>
+              <option value="1">King Bed</option>
+              <option value="2">Queen Bed</option>
+              <option value="3">Electric Bed</option>
+              <option value="4">Futon Bed</option>
+              <option value="6">Mattress Bed</option>
+              <option value="7">Air Bed</option>
+            </select>
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label text-muted"
+              >Room Drescription<span class="text-warning">*</span></label
+            >
+            <textarea class="form-control"></textarea>
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label text-muted"
+              >Reserve Condition<span class="text-warning">*</span></label
+            >
+            <textarea class="form-control"></textarea>
+          </div>
+        </form>
+        <div class="d-flex">
+          <button type="button" class="btn w-100 me-1 py-2 btn-primary">
+            Clear
+          </button>
+          <button type="button" class="btn w-100 ms-1 py-2 btn-dark">
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Edit: Room-->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="edit-room"
+      aria-labelledby="edit-room"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Edit Room</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <form>
+          <div class="form-group mb-3">
+            <label class="form-label text-muted"
+              >Room Type <span class="text-danger">*</span></label
+            >
+            <input type="text" class="form-control" value="VIP-Guest" />
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label text-muted"
+              >Capacity <span class="text-danger">*</span></label
+            >
+            <input type="number" class="form-control" value="3" />
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label text-muted"
+              >Extra Capability <span class="text-danger">*</span></label
+            >
+            <input type="text" class="form-control" value="YES" />
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label text-muted"
+              >Room Price<span class="text-danger">*</span></label
+            >
+            <input type="number" class="form-control" value="4000" />
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label text-muted"
+              >Bed Charge<span class="text-danger">*</span></label
+            >
+            <input type="number" class="form-control" value="100" />
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label text-muted"
+              >Room Size<span class="text-danger">*</span></label
+            >
+            <select class="form-select">
+              <option selected>King</option>
+              <option value="1">Singal</option>
+              <option value="2">Double</option>
+              <option value="3">Tripal</option>
+              <option value="4">Quad</option>
+              <option value="6">Queen</option>
+              <option value="7">King</option>
+              <option value="8">Others</option>
+            </select>
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label text-muted"
+              >Bed Number<span class="text-danger">*</span></label
+            >
+            <input type="number" class="form-control" value="2" />
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label text-muted"
+              >Bed Type<span class="text-danger">*</span></label
+            >
+            <select class="form-select">
+              <option selected>Choose Room Size</option>
+              <option value="1">King Bed</option>
+              <option value="2">Queen Bed</option>
+              <option value="3">Electric Bed</option>
+              <option value="4">Futon Bed</option>
+              <option value="6">Mattress Bed</option>
+              <option value="7">Air Bed</option>
+            </select>
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label text-muted"
+              >Room Drescription<span class="text-danger">*</span></label
+            >
+            <textarea class="form-control">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </textarea
+            >
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label text-muted"
+              >Reserve Condition<span class="text-danger">*</span></label
+            >
+            <textarea class="form-control">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </textarea
+            >
+          </div>
+        </form>
+        <div class="d-flex">
+          <button type="button" class="btn w-100 ms-1 py-2 btn-primary">
+            Update
+          </button>
+        </div>
+      </div>
+    </div>
     <!--[ hotelair template vender js ]-->
     <script src="../assets/bundles/libscripts.bundle.js"></script>
     <script src="../assets/bundles/dataTables.bundle.js"></script>
@@ -2673,5 +2722,4 @@
     </script>
   </body>
 
-  <!-- Mirrored from pixelwibes.in/templates/hotelair/html/checkin-payment.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:32:51 GMT -->
 </html>
