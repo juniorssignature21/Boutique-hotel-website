@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Mirrored from pixelwibes.in/templates/hotelair/html/cab-booking.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:31:45 GMT -->
   <head>
     <title>: X-EMPIRE: Hotel Management Admin Dashboard</title>
     <meta charset="utf-8" />
@@ -16,7 +15,11 @@
     <meta name="keyword" content="bootstrap admin template" />
 
     <!--[ Favicon]-->
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../assets/images/favicon.ico"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -34,14 +37,26 @@
       sizes="180x180"
       href="../assets/images/apple-touch-icon.png"
     />
-
-    <link rel="stylesheet" href="assets/vendor/dataTables.min.css" />
-
+    <!-- preline and tailwind........... -->
+    <link
+      rel="stylesheet"
+      href="./node_modules/apexcharts/dist/apexcharts.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/preline@1.0.0/dist/preline.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/preline@1.0.0/dist/preline.min.js"></script>
+    <link href="" rel="stylesheet" />
+   <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="../assets/vendor/dataTables.min.css" />
     <!--[ Template main css file ]-->
-    <link rel="stylesheet" href="assets/css/style.min.css" />
+    <link rel="stylesheet" href="../assets/css/style.min.css" />
+    <link rel="stylesheet" href="../assets/css/Admin.css" />
   </head>
 
-  <body data-theme="theme-PurpleHeart" class="svgstroke-a bg-gradient">
+  <body data-theme="theme-Custom" class="svgstroke-a bg-gradient">
     <main class="container-fluid px-0">
       <!-- start: page menu link -->
       <aside
@@ -56,7 +71,7 @@
             id="offcanvas_Navbar"
           >
             <div class="offcanvas-header">
-              <span class="fw-bold fs-5 text-gradient">X-Empire</span>
+              <span class="fw-bold fs-5 text-gradient border-3">X-Empire</span>
               <button
                 type="button"
                 class="btn-close btn-close-white"
@@ -72,10 +87,11 @@
                   alt="avatar"
                 />
                 <div class="ms-3 mt-1">
-                  <h4 class="mb-0 text-gradient title-font">Anny glover</h4>
-                  <span class="text-muted">Super Admin</span>
+                  <h4 class="mb-0 text-gradient title-font">MR Admin</h4>
+                  <span class="text-muted"> Admin</span>
                 </div>
               </div>
+
               <!-- start: Menu tab -->
               <ul
                 class="nav nav-tabs tab-dynamic px-0 mb-4"
@@ -93,27 +109,6 @@
                     >HOTELS</a
                   >
                 </li>
-                <li class="nav-item" role="presentation">
-                  <a
-                    class="ps-2 pe-3 nav-link"
-                    data-bs-toggle="tab"
-                    href="#tab_hrms"
-                    role="tab"
-                    aria-selected="true"
-                    >HRMS</a
-                  >
-                </li>
-                <li class="nav-item" role="presentation">
-                  <a
-                    class="ps-2 pe-3 nav-link"
-                    data-bs-toggle="tab"
-                    href="#tab_settings"
-                    role="tab"
-                    aria-selected="false"
-                    tabindex="-1"
-                    >TUNING</a
-                  >
-                </li>
               </ul>
               <!-- start: Menu content -->
               <div class="tab-content">
@@ -124,14 +119,18 @@
                   role="tabpanel"
                 >
                   <h6
-                    class="fl-title title-font ps-2 small text-uppercase text-muted"
+                    class="fl-title title-font ps-2 small text-uppercase text-muted py-3"
                     style="--dynamic-color: var(--theme-color1)"
                   >
                     Universal
                   </h6>
                   <ul class="list-unstyled mb-4 menu-list">
                     <li>
-                      <a href="index.html" aria-label="Hotel Dashboard">
+                      <a
+                        class="active"
+                        href="index(Admin).html"
+                        aria-label="Hotel Dashboard"
+                      >
                         <svg
                           class="svg-stroke"
                           xmlns="http://www.w3.org/2000/svg"
@@ -157,7 +156,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="hotels.html" aria-label="Hotel Front">
+                      <a href="Hotel(Admin).html" aria-label="Hotel Front">
                         <svg
                           class="svg-stroke"
                           xmlns="http://www.w3.org/2000/svg"
@@ -180,7 +179,10 @@
                       </a>
                     </li>
                     <li>
-                      <a href="transaction.html" aria-label="Transaction list">
+                      <a
+                        href="transaction(Admin).html"
+                        aria-label="Transaction list"
+                      >
                         <svg
                           class="svg-stroke"
                           xmlns="http://www.w3.org/2000/svg"
@@ -368,53 +370,8 @@
                         </li>
                       </ul>
                     </li>
-                    <li>
-                      <a
-                        href="#CarbookingMenu"
-                        data-bs-toggle="collapse"
-                        aria-expanded="true"
-                        class="dropdown-toggle"
-                        aria-label="Users"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="svg-stroke"
-                          width="24"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                          <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                          <path
-                            d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5"
-                          />
-                        </svg>
-                        <span class="mx-3">Cab Facility</span>
-                      </a>
-                      <ul
-                        class="collapse list-unstyled show"
-                        id="CarbookingMenu"
-                      >
-                        <li>
-                          <a href="cab-list.html" aria-label="Cab Details"
-                            >Cab List</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="active"
-                            href="cab-booking.html"
-                            aria-label="Cab Booking"
-                            >Cab Booking</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
+
+                     <li>
                       <a
                         href="#ItemsManageMenu"
                         data-bs-toggle="collapse"
@@ -444,7 +401,7 @@
                             d="M3 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"
                           />
                         </svg>
-                        <span class="mx-3">Items Manage</span>
+                        <span class="mx-3">Inventory</span>
                       </a>
                       <ul class="collapse list-unstyled" id="ItemsManageMenu">
                         <li>
@@ -482,6 +439,10 @@
                         </li>
                       </ul>
                     </li>
+
+
+
+
                     <li>
                       <a
                         href="#PersonalisedMenu"
@@ -543,6 +504,48 @@
                         </li>
                       </ul>
                     </li>
+
+                  
+                    <li>
+                      <a
+                        href="#pos"
+                        data-bs-toggle="collapse"
+                        aria-expanded="false"
+                        class="dropdown-toggle"
+                        aria-label="Users"
+                      >
+                        <i class="bi bi-bag"></i>
+                        <span class="mx-3">P-O-S</span>
+                      </a>
+                      <ul id="pos" class="collapse list-unstyled">
+                        <li>
+                          <a href="product-list.html" aria-label=""
+                            >Product list</a
+                          >
+                        </li>
+                        <li>
+                          <a href="reform.html" aria-label="">Reform</a>
+                        </li>
+                        <li>
+                          <a href="product-cart.html" aria-label=""
+                            >Product Cart</a
+                          >
+                        </li>
+                        <li>
+                          <a href="pos-user.html" aria-label="">Pos User</a>
+                        </li>
+                        <li>
+                          <a href="discount.html" aria-label="">Discount</a>
+                        </li>
+                      </ul>
+                    </li>
+
+
+
+
+
+
+                    
                     <li class="py-2 mt-2">
                       <h6
                         class="fl-title title-font ps-2 small text-uppercase text-muted"
@@ -553,25 +556,28 @@
                       <ul class="list-unstyled">
                         <li>
                           <a
-                            href="booking-report.html"
+                            href="booking-report(Admin).html"
                             aria-label="Booking Reports"
                             >Booking Reports</a
                           >
                         </li>
                         <li>
                           <a
-                            href="purchase-report.html"
+                            href="purchase-reports(Admin).html"
                             aria-label="Purchase Report"
                             >Purchase Reports</a
                           >
                         </li>
                         <li>
-                          <a href="stock-report.html" aria-label="Stock Report"
+                          <a
+                            href="stock-report(Admin).html"
+                            aria-label="Stock Report"
                             >Stock Reports</a
                           >
                         </li>
                       </ul>
                     </li>
+
                     <li class="py-2 mt-2">
                       <h6
                         class="fl-title title-font ps-2 small text-uppercase text-muted"
@@ -581,51 +587,53 @@
                       </h6>
                       <ul class="list-unstyled">
                         <li>
-                          <a href="bed-list.html" aria-label="Bed List"
+                          <a href="bed-list(Admin).html" aria-label="Bed List"
                             >Bed List</a
                           >
                         </li>
                         <li>
                           <a
-                            href="booking-type-list.html"
+                            href="booking-type-list(Admin).html"
                             aria-label="Booking Type List"
                             >Booking Type List</a
                           >
                         </li>
                         <li>
                           <a
-                            href="commission-list.html"
+                            href="commission-list(Admin).html"
                             aria-label="Booking Commission "
                             >Booking Commission
                           </a>
                         </li>
                         <li>
                           <a
-                            href="complementary-list.html"
+                            href="complementary-list(Admin).html"
                             aria-label="Complementary"
                             >Complementary List</a
                           >
                         </li>
                         <li>
                           <a
-                            href="floor-plan-list.html"
+                            href="floor-plan-list(Admin).html"
                             aria-label="Floor Plan List"
                             >Floor Plan List</a
                           >
                         </li>
                         <li>
-                          <a href="room-list.html" aria-label="Room List"
+                          <a href="room-list(Admin).html" aria-label="Room List"
                             >Room List</a
                           >
                         </li>
                         <li>
-                          <a href="room-image.html" aria-label="Room Images"
+                          <a
+                            href="room-image(Admin).html"
+                            aria-label="Room Images"
                             >Room Images</a
                           >
                         </li>
                         <li>
                           <a
-                            href="promocode-list.html"
+                            href="promocode-list(Admin).html"
                             aria-label="Promocode List"
                             >Promocode List</a
                           >
@@ -635,6 +643,23 @@
                   </ul>
                 </div>
                 <!-- start: HR tab -->
+
+                <ul
+                  class="nav nav-tabs tab-dynamic px-0 mb-4"
+                  role="tablist"
+                  style="--dynamic-color: var(--accent-color)"
+                >
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="ps-2 pe-3 nav-link"
+                      data-bs-toggle="tab"
+                      href="#tab_hrms"
+                      role="tab"
+                      aria-selected="true"
+                      >HRMS</a
+                    >
+                  </li>
+                </ul>
                 <div class="tab-pane fade" id="tab_hrms" role="tabpanel">
                   <h6
                     class="fl-title title-font ps-2 small text-uppercase text-muted"
@@ -840,364 +865,8 @@
                     </li>
                   </ul>
                 </div>
-                <!-- start: Setting tab-->
-                <div class="tab-pane fade" id="tab_settings" role="tabpanel">
-                  <h6
-                    class="fl-title title-font ps-2 small text-uppercase text-muted"
-                    style="--dynamic-color: var(--theme-color1)"
-                  >
-                    Configuration
-                  </h6>
-                  <ul class="list-unstyled mb-4 menu-list">
-                    <li>
-                      <a href="tuning.html" aria-label="tuning">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="svg-stroke"
-                          width="24"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <path
-                            d="M19.875 6.27a2.225 2.225 0 0 1 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z"
-                          />
-                          <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-                        </svg>
-                        <span class="mx-3">Tuning</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="common-settings.html" aria-label="payment set">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="svg-stroke"
-                          width="24"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <path d="M3 21l18 0" />
-                          <path d="M5 21v-14l8 -4v18" />
-                          <path d="M19 21v-10l-6 -4" />
-                          <path d="M9 9l0 .01" />
-                          <path d="M9 12l0 .01" />
-                          <path d="M9 15l0 .01" />
-                          <path d="M9 18l0 .01" />
-                        </svg>
-                        <span class="mx-3">Common</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="payment-set.html" aria-label="payment set">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="svg-stroke"
-                          width="24"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <path
-                            d="M12 19h-6a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v4.5"
-                          />
-                          <path d="M3 10h18" />
-                          <path d="M16 19h6" />
-                          <path d="M19 16l3 3l-3 3" />
-                          <path d="M7.005 15h.005" />
-                          <path d="M11 15h2" />
-                        </svg>
-                        <span class="mx-3">Payment Set</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="accounts-setting.html"
-                        aria-label="Accounts Setting"
-                      >
-                        <svg
-                          class="svg-stroke"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path
-                            stroke="none"
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          ></path>
-                          <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-                          <path
-                            d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
-                          ></path>
-                          <path d="M9 7l1 0"></path>
-                          <path d="M9 13l6 0"></path>
-                          <path d="M13 17l2 0"></path>
-                        </svg>
-                        <span class="mx-3">Accounts</span>
-                      </a>
-                    </li>
-                    <li class="py-2 mt-2">
-                      <h6
-                        class="fl-title title-font ps-2 small text-uppercase text-muted"
-                        style="--dynamic-color: var(--theme-color1)"
-                      >
-                        Role Managment
-                      </h6>
-                      <ul class="list-unstyled">
-                        <li>
-                          <a href="role-add.html" aria-label="Role Add"
-                            >Role Add</a
-                          >
-                        </li>
-                        <li>
-                          <a href="role-list.html" aria-label="Role List"
-                            >Role List</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            href="role-permission.html"
-                            aria-label="Role Permission"
-                            >Role Permission</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            href="role-create-list.html"
-                            aria-label="Role Create List"
-                            >Role Create</a
-                          >
-                        </li>
-                        <li>
-                          <a href="role-assign.html" aria-label="Role Assign"
-                            >Role Assign</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            href="role-access-list.html"
-                            aria-label="Role Access"
-                            >Role Access</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="py-2 mt-2">
-                      <h6
-                        class="fl-title title-font ps-2 small text-uppercase text-muted"
-                        style="--dynamic-color: var(--theme-color1)"
-                      >
-                        Front Pages
-                      </h6>
-                      <ul class="list-unstyled">
-                        <li>
-                          <a href="about-us.html" aria-label="About Us"
-                            >About Us</a
-                          >
-                        </li>
-                        <li>
-                          <a href="contact-us.html" aria-label="Contact Us"
-                            >Contact Us</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            href="privacy-policy.html"
-                            aria-label="Privacy Policy"
-                            >Privacy Policy</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            href="terms-conditions.html"
-                            aria-label="Terms Conditions"
-                            >Terms Conditions</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="py-2 mt-2">
-                      <h6
-                        class="fl-title title-font ps-2 small text-uppercase text-muted"
-                        style="--dynamic-color: var(--theme-color1)"
-                      >
-                        Application
-                      </h6>
-                      <ul class="list-unstyled">
-                        <li>
-                          <a href="calendar.html" aria-label="Calendar"
-                            >My Calendar</a
-                          >
-                        </li>
-                        <li>
-                          <a href="inbox.html" aria-label="Inbox">Inbox (98)</a>
-                        </li>
-                        <li>
-                          <a href="chat.html" aria-label="Chat">Chat (2)</a>
-                        </li>
-                        <li>
-                          <a href="blog.html" aria-label="Blog">Blog Article</a>
-                        </li>
-                        <li>
-                          <a href="filemanager.html" aria-label="File Manager"
-                            >File Manager</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <!-- start: More Pages -->
-                  <h6
-                    class="fl-title title-font ps-2 small text-uppercase text-muted"
-                    style="--dynamic-color: var(--theme-color4)"
-                  >
-                    Pages
-                  </h6>
-                  <ul class="list-unstyled mb-4 menu-list">
-                    <li>
-                      <a
-                        href="#Authentication"
-                        data-bs-toggle="collapse"
-                        aria-expanded="false"
-                        class="dropdown-toggle"
-                        aria-label="Authentication"
-                      >
-                        <svg
-                          class="svg-stroke"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path
-                            stroke="none"
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          ></path>
-                          <path
-                            d="M11.5 21h-4.5a2 2 0 0 1 -2 -2v-6a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2"
-                          ></path>
-                          <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path>
-                          <path d="M8 11v-4a4 4 0 1 1 8 0v4"></path>
-                          <path d="M20 21l2 -2l-2 -2"></path>
-                          <path d="M17 17l-2 2l2 2"></path>
-                        </svg>
-                        <span class="mx-3">Authentication</span>
-                      </a>
-                      <ul class="collapse list-unstyled" id="Authentication">
-                        <li><a href="signin.html">Sign in</a></li>
-                        <li><a href="signup.html">Sign up</a></li>
-                        <li>
-                          <a href="password-reset.html">Password reset</a>
-                        </li>
-                        <li>
-                          <a href="two-step.html">2-Step Authentication</a>
-                        </li>
-                        <li><a href="lockscreen.html">Lockscreen</a></li>
-                        <li><a href="maintenance.html">Maintenance</a></li>
-                        <li><a href="404.html">404</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="search.html" aria-label="Search page">
-                        <svg
-                          class="svg-stroke"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path
-                            stroke="none"
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          ></path>
-                          <path
-                            d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"
-                          ></path>
-                          <path d="M21 21l-6 -6"></path>
-                        </svg>
-                        <span class="mx-3">Search page</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="docs/index.html"
-                        aria-label="Template documentation"
-                      >
-                        <svg
-                          class="svg-stroke"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path
-                            stroke="none"
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          ></path>
-                          <path
-                            d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1"
-                          ></path>
-                        </svg>
-                        <span class="mx-3">Documentation</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="changelog.html"
-                        title="Template Changelog"
-                        aria-label="Template Changelog"
-                      >
-                        <svg
-                          class="svg-stroke"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path
-                            stroke="none"
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          ></path>
-                          <path
-                            d="M10.09 4.01l.496 -.495a2 2 0 0 1 2.828 0l7.071 7.07a2 2 0 0 1 0 2.83l-7.07 7.07a2 2 0 0 1 -2.83 0l-7.07 -7.07a2 2 0 0 1 0 -2.83l3.535 -3.535h-3.988"
-                          ></path>
-                          <path d="M7.05 11.038v-3.988"></path>
-                        </svg>
-                        <span class="mx-3">Changelog: <b>v1.0</b></span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+              
+               <!-- start: Setting tab-->
               </div>
             </div>
           </div>
@@ -2700,11 +2369,11 @@
     </div>
 
     <!--[ hotelair template vender js ]-->
-    <script src="assets/bundles/libscripts.bundle.js"></script>
-    <script src="assets/bundles/dataTables.bundle.js"></script>
+    <script src="../assets/bundles/libscripts.bundle.js"></script>
+    <script src="../assets/bundles/dataTables.bundle.js"></script>
 
     <!-- Template page js -->
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
     <script>
       $(document).ready(function () {
         $(".dataTable").addClass("nowrap").dataTable({
